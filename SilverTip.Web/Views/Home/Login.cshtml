@@ -1,0 +1,110 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Ecoleaf - Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta content="Coderthemes" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="assets/images/favicon.png">
+    <link href="~/Content/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/assets/css/core.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/assets/css/icons.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/assets/css/components.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/assets/css/pages.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/assets/css/menu.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/assets/css/responsive.css" rel="stylesheet" type="text/css">
+    <script src="~/Content/assets/js/modernizr.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.3.4"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+</head>
+
+<body class="fixed-left loginback">
+    <!-- Begin page -->
+    <div id="wrapper">
+        <div class="row">
+            <div class="col-lg-8 slider-side hidden-xs">
+                <div class="geeting">Good Morning <br>16th Jan 2017 - 09:30 AM</div>
+                <div class="slider-side-inner">
+
+                    <img src="~/Content/assets/images/logo.png">
+                    <ul>
+                        <li>New and Inproved Interface</li>
+                        <li>Enter Leaf Collection Details</li>
+                        <li>Manage Suppliers</li>
+                        <li>Manage Inventory</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 login-side">
+                <div class="row">
+                    <div class="col-xs-9 form-items text-center login-text">
+                        <i class="fa fa-user-circle-o fa-5x" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-xs-9 form-items">
+                    </div>
+                    <div class="col-xs-9 form-items text-center login-text">
+                        enter the following details and login to the system
+                    </div>
+                    <div class="loginform" id="loginform">
+                        <div class="col-xs-9 form-items">
+                            <input class="form-control" type="text" required="" placeholder="Username" v-model="loginForm.userName">
+                        </div>
+                        <div class="col-xs-9 form-items">
+                            <input class="form-control" type="password" required="" placeholder="Password" v-model="loginForm.password">
+                        </div>
+                        <div class="col-xs-9 form-items">
+                            <button class="btn btn-block btn--md btn-primary w-lg waves-effect waves-light" type="submit" v-on:click="login" >
+                                Log In <i class="fa fa-sign-in" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-xs-9 form-items text-center login-text">
+                        <a href="#">Having trouble login in ?</a>
+                        <br>
+                        <span>By logging in, you accept our <a href="#">Security and Privacy Statements</a></span>
+                    </div>
+
+                    <div class="col-xs-12 login-footer text-center">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a href="#">Support</a>  |  <a href="#">Contact Us</a>
+                            </div>
+                            <div class="col-md-6">
+                                © 2016 Copyright  ecoleaf
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END wrapper -->
+    <script>
+        var resizefunc = [];
+    </script>
+    <!-- Main  -->
+    <script src="~/Content/assets/js/jquery.min.js"></script>
+    <script src="~/Content/assets/js/bootstrap.min.js"></script>
+    <script src="~/Content/assets/js/detect.js"></script>
+    <script src="~/Content/assets/js/fastclick.js"></script>
+    <script src="~/Content/assets/js/jquery.slimscroll.js"></script>
+    <script src="~/Content/assets/js/jquery.blockUI.js"></script>
+    <script src="~/Content/assets/js/waves.js"></script>
+    <script src="~/Content/assets/js/wow.min.js"></script>
+    <script src="~/Content/assets/js/jquery.nicescroll.js"></script>
+    <script src="~/Content/assets/js/jquery.scrollTo.min.js"></script>
+    <script src="~/Content/assets/js/jquery.app.js"></script>
+
+    <script src="~/Scripts/silverTip/login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,328 @@
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\ApplicationInsights.config
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\roslyn\csc.exe
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\roslyn\System.Collections.Immutable.dll
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\roslyn\System.Reflection.Metadata.dll
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\roslyn\vbc.exe
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\roslyn\VBCSCompiler.exe
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\roslyn\VBCSCompiler.exe.config
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\SilverTip.Web.dll.config
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\SilverTip.Web.dll
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\SilverTip.Web.pdb
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Antlr3.Runtime.dll
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\EntityFramework.dll
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\EntityFramework.SqlServer.dll
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AI.DependencyCollector.dll
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AI.Web.dll
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AI.WindowsServer.dll
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.ApplicationInsights.dll
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.dll
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Security.dll
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Security.Google.dll
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Web.Infrastructure.dll
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Newtonsoft.Json.dll
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Owin.dll
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\System.Web.Helpers.dll
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\System.Web.Mvc.dll
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\System.Web.Optimization.dll
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\System.Web.Razor.dll
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\System.Web.WebPages.Deployment.dll
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\System.Web.WebPages.dll
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\System.Web.WebPages.Razor.dll
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\WebGrease.dll
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AI.DependencyCollector.xml
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AI.Web.xml
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AI.WindowsServer.xml
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.ApplicationInsights.xml
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\System.Web.Helpers.xml
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\System.Web.Mvc.xml
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\System.Web.Optimization.xml
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\System.Web.Razor.xml
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\System.Web.WebPages.xml
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\System.Web.WebPages.Deployment.xml
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\System.Web.WebPages.Razor.xml
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Antlr3.Runtime.pdb
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Newtonsoft.Json.xml
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\EntityFramework.xml
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\EntityFramework.SqlServer.xml
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.xml
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Security.xml
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Security.Google.xml
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\obj\Debug\SilverTip.Web.csprojResolveAssemblyReference.cache
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\obj\Debug\SilverTip.Web.dll
+C:\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\obj\Debug\SilverTip.Web.pdb
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\ApplicationInsights.config
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\roslyn\csc.exe
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\roslyn\System.Collections.Immutable.dll
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\roslyn\System.Reflection.Metadata.dll
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\roslyn\vbc.exe
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\roslyn\VBCSCompiler.exe
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\roslyn\VBCSCompiler.exe.config
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\SilverTip.Web.dll.config
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\SilverTip.Web.dll
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\SilverTip.Web.pdb
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Antlr3.Runtime.dll
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\EntityFramework.dll
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\EntityFramework.SqlServer.dll
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AI.Agent.Intercept.dll
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AI.DependencyCollector.dll
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AI.Web.dll
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AI.WindowsServer.dll
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.ApplicationInsights.dll
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AspNet.Identity.Core.dll
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.dll
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Security.Cookies.dll
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Security.dll
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Security.Facebook.dll
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Security.Google.dll
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Security.OAuth.dll
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Security.Twitter.dll
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Web.Infrastructure.dll
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Newtonsoft.Json.dll
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Owin.dll
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\System.Web.Helpers.dll
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\System.Web.Mvc.dll
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\System.Web.Optimization.dll
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\System.Web.Razor.dll
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\System.Web.WebPages.Deployment.dll
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\System.Web.WebPages.dll
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\System.Web.WebPages.Razor.dll
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\WebGrease.dll
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AI.DependencyCollector.xml
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AI.Web.xml
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AI.WindowsServer.xml
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.ApplicationInsights.xml
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\System.Web.Helpers.xml
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\System.Web.Mvc.xml
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\System.Web.Optimization.xml
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\System.Web.Razor.xml
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\System.Web.WebPages.xml
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\System.Web.WebPages.Deployment.xml
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\System.Web.WebPages.Razor.xml
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Antlr3.Runtime.pdb
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Newtonsoft.Json.xml
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\EntityFramework.xml
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\EntityFramework.SqlServer.xml
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AspNet.Identity.Core.xml
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.xml
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Security.xml
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Security.Facebook.xml
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Security.Cookies.xml
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Security.OAuth.xml
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Security.Google.xml
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Security.Twitter.xml
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\obj\Debug\SilverTip.Web.csprojResolveAssemblyReference.cache
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\obj\Debug\SilverTip.Web.dll
+E:\SilverTip\Project\SilverTipWeb\SilverTip.Web\SilverTip.Web\obj\Debug\SilverTip.Web.pdb
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\ApplicationInsights.config
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\roslyn\csc.exe
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\roslyn\System.Collections.Immutable.dll
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\roslyn\System.Reflection.Metadata.dll
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\roslyn\vbc.exe
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\roslyn\VBCSCompiler.exe
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\roslyn\VBCSCompiler.exe.config
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\SilverTip.Web.dll.config
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\SilverTip.Web.dll
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\SilverTip.Web.pdb
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Antlr3.Runtime.dll
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\EntityFramework.dll
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\EntityFramework.SqlServer.dll
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AI.DependencyCollector.dll
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AI.Web.dll
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AI.WindowsServer.dll
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.ApplicationInsights.dll
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.dll
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Security.dll
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Security.Google.dll
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Web.Infrastructure.dll
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Newtonsoft.Json.dll
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Owin.dll
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\System.Web.Helpers.dll
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\System.Web.Mvc.dll
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\System.Web.Optimization.dll
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\System.Web.Razor.dll
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\System.Web.WebPages.Deployment.dll
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\System.Web.WebPages.dll
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\System.Web.WebPages.Razor.dll
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\WebGrease.dll
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AI.DependencyCollector.xml
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AI.Web.xml
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AI.WindowsServer.xml
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.ApplicationInsights.xml
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\System.Web.Helpers.xml
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\System.Web.Mvc.xml
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\System.Web.Optimization.xml
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\System.Web.Razor.xml
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\System.Web.WebPages.xml
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\System.Web.WebPages.Deployment.xml
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\System.Web.WebPages.Razor.xml
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Antlr3.Runtime.pdb
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Newtonsoft.Json.xml
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\EntityFramework.xml
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\EntityFramework.SqlServer.xml
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.xml
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Security.xml
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Security.Google.xml
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\obj\Debug\SilverTip.Web.csprojResolveAssemblyReference.cache
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\obj\Debug\SilverTip.Web.dll
+C:\Project\frontend\SilverTipWeb\SilverTip.Web\SilverTip.Web\obj\Debug\SilverTip.Web.pdb
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\ApplicationInsights.config
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\roslyn\csc.exe
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\roslyn\System.Collections.Immutable.dll
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\roslyn\System.Reflection.Metadata.dll
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\roslyn\vbc.exe
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\roslyn\VBCSCompiler.exe
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\roslyn\VBCSCompiler.exe.config
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\SilverTip.Web.dll.config
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\SilverTip.Web.dll
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\SilverTip.Web.pdb
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\Antlr3.Runtime.dll
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\EntityFramework.dll
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\EntityFramework.SqlServer.dll
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\Microsoft.AI.DependencyCollector.dll
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\Microsoft.AI.Web.dll
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\Microsoft.AI.WindowsServer.dll
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\Microsoft.ApplicationInsights.dll
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\Microsoft.Owin.dll
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\Microsoft.Owin.Security.dll
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\Microsoft.Owin.Security.Google.dll
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\Microsoft.Web.Infrastructure.dll
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\Newtonsoft.Json.dll
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\Owin.dll
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\System.Web.Helpers.dll
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\System.Web.Mvc.dll
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\System.Web.Optimization.dll
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\System.Web.Razor.dll
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\System.Web.WebPages.Deployment.dll
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\System.Web.WebPages.dll
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\System.Web.WebPages.Razor.dll
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\WebGrease.dll
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\Microsoft.AI.DependencyCollector.xml
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\Microsoft.AI.Web.xml
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\Microsoft.AI.WindowsServer.xml
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\Microsoft.ApplicationInsights.xml
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\System.Web.Helpers.xml
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\System.Web.Mvc.xml
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\System.Web.Optimization.xml
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\System.Web.Razor.xml
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\System.Web.WebPages.xml
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\System.Web.WebPages.Deployment.xml
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\System.Web.WebPages.Razor.xml
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\Antlr3.Runtime.pdb
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\Newtonsoft.Json.xml
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\EntityFramework.xml
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\EntityFramework.SqlServer.xml
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\Microsoft.Owin.xml
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\Microsoft.Owin.Security.xml
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\Microsoft.Owin.Security.Google.xml
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\obj\Debug\SilverTip.Web.csprojResolveAssemblyReference.cache
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\obj\Debug\SilverTip.Web.dll
+E:\Allion Technologies\SilverTipWEB\SilverTip.Web\obj\Debug\SilverTip.Web.pdb

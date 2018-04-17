@@ -1,0 +1,953 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!-- Start content -->
+<div class="content">
+
+    <div class="container">
+
+        <!-- Page-Title -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-3 title-start">
+                        <span>Leaf Collection - Summary</span>
+                    </div>
+
+                    <div class="col-md-9 title-end">
+
+                        <ol class="breadcrumbs pull-right">
+                            <li>Home </li>
+                            <li>Leaf Collection</li>
+                            <li class="active">Leaf Collection Summary</li>
+                        </ol>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="search-fileds">
+
+                <div class="panel panel-default">
+
+                    <div class="panel-body">
+
+                        <div class="row">
+                            <div class="col-md-2">
+
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                                    </span>
+                                    <input type="text" class="form-control" placeholder="From" id="datepicker" value="From" style="height:30px">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                                    </span>
+                                    <input type="text" class="form-control" placeholder="To" id="datepicker2" value="To" style="height:30px">
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-2">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-location-arrow" aria-hidden="true"></i></span>
+                                    <select class="select2 form-control" data-placeholder="text" placeholder="Type" id="routeID">
+                                        <option value="">Route</option>
+                                        <option value="United States">Ambewela</option>
+                                        <option value="United Kingdom">Mathugama</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-hashtag" aria-hidden="true"></i></span>
+                                    <select class="select2 form-control" data-placeholder="text" placeholder="Type" id="supID">
+                                        <option value="">Supplier Reg No: / Name</option>
+                                        <option value="United States">12456 - Anil</option>
+                                        <option value="United Kingdom">01345 - Abeysinghe</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-1 text-center">
+                                <a href="javascript:;" class="btn btn-success waves-effect waves-light btn-sm" onclick="showTable();">Leaf Collection</a>
+
+                            </div>
+
+                            <div class="col-md-2 text-center">
+                                <a href="javascript:;" class="btn btn-success waves-effect waves-light btn-sm" onclick="showSupp();">List Suppliers</a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- leaf col-resultTable -->
+
+        <div class="row" id="leafcol-resultTable" style="display:none">
+
+            <div class="panel panel-default ">
+                <div class="panel-heading bg-green">
+                    <h3 class="panel-title">Summary &nbsp;| &nbsp;Feb 2017  </h3>
+                    <div style="float:right; margin-top: -32px;">
+                        <div class="form-group col-md-10 pull-right" style="line-height:30px;">
+                            <button id="monthpicker2" type="button" class="btn btn-default dropdown-toggle waves-effect" data-toggle="dropdown" aria-expanded="false">Month<span class="caret"></span></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="row" id="supplierSummaryList">
+                        <div class="col-xs-12">
+                            <div class="table-responsive">
+                                <table class="table table-summary-supp">
+                                    <thead>
+                                        <tr>
+                                            <th>Supplier Reg No: </th>
+                                            <th>Supplier Name </th>
+                                            <th>Route</th>
+                                            <th>Weight</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr v-for="lst in supplierList">
+                                            <td>{{lst.regno}}</td>
+                                            <td>{{lst.name}}</td>
+                                            <td>{{lst.route}}</td>
+                                            <td>{{lst.weight}}</td>
+                                            <td><a href="javascript:void(0);" class="openleafCol btn btn-inverse waves-effect waves-light btn-xs  m-b-5">+</a></td>
+                                        </tr>
+
+
+
+
+                                        @*<tr>
+
+                                            <td>012547</td>
+                                            <td>Jinadasa</td>
+                                            <td>Ambewela</td>
+                                            <td>61KG</td>
+                                            <td><a href="javascript:void(0);" class="openleafCol btn btn-inverse waves-effect waves-light btn-xs  m-b-5">+</a></td>
+                                        </tr>
+                                        <tr>
+
+                                            <td>012547</td>
+                                            <td>Ashoka</td>
+                                            <td>Nuwara-Eliya</td>
+                                            <td>11KG</td>
+                                            <td><a href="javascript:void(0);" class="openleafCol btn btn-inverse waves-effect waves-light btn-xs  m-b-5">+</a></td>
+                                        </tr>
+
+                                        <tr>
+
+                                            <td>12223</td>
+                                            <td>Vishan</td>
+                                            <td>Bandarawela</td>
+                                            <td>31KG</td>
+                                            <td><a href="javascript:void(0);" class="openleafCol btn btn-inverse waves-effect waves-light btn-xs  m-b-5">+</a></td>
+                                        </tr>
+                                        <tr>
+
+                                            <td>655443</td>
+                                            <td>Pradeep</td>
+                                            <td>Ambewela</td>
+                                            <td>22KG</td>
+                                            <td><a href="javascript:void(0);" class="openleafCol btn btn-inverse waves-effect waves-light btn-xs  m-b-5">+</a></td>
+                                        </tr>
+                                        <tr>
+
+                                            <td>012547</td>
+                                            <td>Jinadasa</td>
+                                            <td>Ambewela</td>
+                                            <td>61KG</td>
+                                            <td><a href="javascript:void(0);" class="openleafCol btn btn-inverse waves-effect waves-light btn-xs  m-b-5">+</a></td>
+                                        </tr>
+                                        <tr>
+
+                                            <td>012547</td>
+                                            <td>Ashoka</td>
+                                            <td>Nuwara-Eliya</td>
+                                            <td>11KG</td>
+                                            <td><a href="javascript:void(0);" class="openleafCol btn btn-inverse waves-effect waves-light btn-xs  m-b-5">+</a></td>
+                                        </tr>
+                                        <tr class="totals">
+                                            <td colspan="3" class="text-center"> Total Collection   </td>
+                                            <td> 231KG   </td>
+                                        </tr>*@
+                                    </tbody>
+                                </table>
+                                <ul class="pagination pagination-sm pull-right">
+                                    <li>
+                                        <a href="javascript:;"> <i class="fa fa-angle-left"></i> </a>
+                                    </li>
+
+                                    <li class="active"> <a href="javascript:;">1</a> </li>
+
+                                    <li>
+                                        <a href="javascript:;"> <i class="fa fa-angle-right"></i> </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- End leaf col-resultTable -->
+        <!-- leaf col-daterange-resultTable -->
+
+        <div class="row" id="leafcol-daterange-resultTable" style="display:none">
+
+            <div class="panel panel-default ">
+                <div class="panel-heading bg-green">
+                    <h3 class="panel-title">Supplier Detail Summary &nbsp;| &nbsp;<span class="coldaterange">02 Feb 2017 - 05 Feb 2017</span>  </h3>
+                    <div style="float:right; margin-top: -30px; margin-right: -17px;">
+                        <div class="form-group">
+                            <div class="col-sm-4 control-label">
+                                <a href="javascript:;" class="btn btn-default waves-effect waves-light btn-sm toggleCurrent">Current Month</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Supplier Reg No: </th>
+                                            <th>Supplier Name </th>
+
+                                            <th>Route</th>
+
+
+                                            <th>Weight</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>100024</td>
+                                            <th>Saman Kumara</th>
+                                            <td>Ambewela</td>
+
+
+                                            <td>34KG</td>
+                                            <td><a href="javascript:void(0);" class="openleafCol btn btn-inverse waves-effect waves-light btn-xs  m-b-5">+</a></td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                                <ul class="pagination pagination-sm pull-right">
+                                    <li>
+                                        <a href="javascript:;"> <i class="fa fa-angle-left"></i> </a>
+                                    </li>
+
+                                    <li class="active"> <a href="javascript:;">1</a> </li>
+
+                                    <li>
+                                        <a href="javascript:;"> <i class="fa fa-angle-right"></i> </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- End leaf col-daterange-resultTable -->
+        <!-- leaf col-route-daterange-resultTable -->
+
+        <div class="row" id="leafcol-route-daterange-resultTable" style="display:none">
+
+            <div class="panel panel-default ">
+                <div class="panel-heading bg-green">
+                    <h3 class="panel-title">Route Detail Summary &nbsp;| &nbsp;<span class="coldaterange">02 Feb 2017 - 05 Feb 2017</span>  </h3>
+                    <div style="float:right; margin-top: -30px; margin-right: -17px;">
+                        <div class="form-group">
+                            <div class="col-sm-4 control-label">
+                                <a href="javascript:;" class="btn btn-default waves-effect waves-light btn-sm toggleRouteCurrent">Current Month</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="row" id="routeDetailSummary">
+                        <div class="col-xs-12">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Route No: </th>
+                                            <th>Route Name </th>
+                                            <th>Total Collection</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr v-for="lst in routeDetail">
+                                            <td>{{lst.routeNo}}</td>
+                                            <td>{{lst.routeName}}</td>
+                                            <td>{{lst.totalCollection}}</td>
+                                            <td><a href="javascript:void(0);" class="openleafCol-Route btn btn-inverse waves-effect waves-light btn-xs  m-b-5">+</a></td>
+                                        </tr>
+                                        @*<tr>
+                                            <td>A0105</td>
+                                            <td>Bandarawela</td>
+                                            <td>460KG</td>
+                                            <td><a href="javascript:void(0);" class="openleafCol-Route btn btn-inverse waves-effect waves-light btn-xs  m-b-5">+</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>S0225</td>
+                                            <td>Galle</td>
+                                            <td>233KG</td>
+                                            <td><a href="javascript:void(0);" class="openleafCol-Route btn btn-inverse waves-effect waves-light btn-xs  m-b-5">+</a></td>
+                                        </tr>*@
+
+                                    </tbody>
+                                </table>
+                                <ul class="pagination pagination-sm pull-right">
+                                    <li>
+                                        <a href="javascript:;"> <i class="fa fa-angle-left"></i> </a>
+                                    </li>
+
+                                    <li class="active"> <a href="javascript:;">1</a> </li>
+
+                                    <li>
+                                        <a href="javascript:;"> <i class="fa fa-angle-right"></i> </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- End leaf col-route-daterange-resultTable -->
+        <!-- leafcol-raoute-name -->
+
+        <div class="row" id="leafcol-routenam-resultTable">
+            <div class="col-md-6">
+                <div class="panel panel-default ">
+                    <div class="panel-heading bg-green">
+                        <h3 class="panel-title">Summary - Route wise &nbsp;| &nbsp;Feb 2017 </h3>
+                        <div style="float:right; margin-top: -32px;">
+                            <div class="form-group col-md-10 pull-right" style="line-height:30px;">
+                                <button id="monthpicker2" type="button" class="btn btn-default dropdown-toggle waves-effect" data- toggle="dropdown" aria-expanded="false">Month <span class="caret"></span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row" id="leafCollectionRouteName">
+                            <div class="col-xs-12">
+                                <div class="table-responsive">
+                                    <table class="table table-summary">
+                                        <thead>
+                                            <tr>
+                                                <th>Route No: </th>
+                                                <th>Route Name </th> 
+                                                <th>Total Collection</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr v-for="lst in routeLeafCollectionSummary">
+                                                <td>{{lst.routeNumber}}</td>
+                                                <td>{{lst.routeName}}</td>
+                                                <td>{{lst.totalCollection}}</td>
+                                                <td><a href="javascript:void(0);" class="openleafCol-Route btn btn-inverse waves-effect waves-light btn-xs  m-b-5">+</a></td>
+                                            </tr>
+                                            @*<tr>
+                                                <td>A0105</td>
+                                                <td>Bandarawela</td>
+                                                <td>460KG</td>
+                                                <td><a href="javascript:void(0);" class="openleafCol-Route btn btn-inverse waves-effect waves-light btn-xs  m-b-5">+</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>K0225</td>
+                                                <td>Mathugama</td>
+                                                <td>533KG</td>
+                                                <td><a href="javascript:void(0);" class="openleafCol-Route btn btn-inverse waves-effect waves-light btn-xs  m-b-5">+</a></td>
+                                            </tr>*@
+                                            <tr class="totals">
+                                                <td colspan="2" class="text-center">Total Collection</td>
+                                                <td>1343KG</td>
+                                                <td></td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="panel panel-border panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"></h3>
+                    </div>
+                    <div class="panel-body">
+
+                        <div id="morris-area-with-dotted" style="height: 300px;"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- end leafcol-raoute-name -->
+        <!-- Supplier Wise Detail -->
+
+
+        <div class="row" id="supplierDetailResultTable" style="display:none">
+            <div class="panel panel-default ">
+                <div class="panel-heading bg-green">
+                    <h3 class="panel-title">Leaf Collection Details<span class="closer">X</span></h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row" id="routeSummaryTable">
+                        <div class="col-md-5">
+                            <div class="panel panel-default panel-fill">
+                                <div class="panel-heading personal-class">
+                                    <h3 class="panel-title"><span class="bg-green sup-details-icon"><i class="fa fa-user"></i></span> Supplier Details</h3>
+                                </div>
+                                <div class="panel-body text-left supplier-body bg-light-green">
+                                    <h4 style="color:#fff">
+                                        <strong>Reg :</strong> 23456
+                                        <br>
+                                        <strong>Name :</strong> Saman Kumara
+                                        <br>
+                                        <strong>Route :</strong> Ambewela
+                                    </h4>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr class="bg-green-2">
+                                            <th>Date</th>
+                                            <th>Collection Officer</th>
+                                            <th>Weight</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr v-for="lst in routeSummary">
+                                            <td>{{lst.date}}</td>
+                                            <td>{{lst.collectionOfficer}}</td>
+                                            <td>{{lst.collectionAmount}}</td>
+
+                                        </tr>
+                                        @*<tr>
+                                                <td>2017/02/2</td>
+                                                <td>Jinadasa</td>
+                                                <td>11KG</td>
+
+                                            </tr>
+
+                                            <tr>
+                                                <td>2017/02/3</td>
+                                                <td>Abeyweera</td>
+                                                <td>33KG</td>
+
+                                            </tr>
+
+                                            <tr>
+                                                <td>2017/02/4</td>
+                                                <td>Jinadasa</td>
+                                                <td>45KG</td>
+
+                                            </tr>
+
+                                            <tr>
+                                                <td>2017/02/5</td>
+                                                <td>Abeyweera</td>
+                                                <td>12KG</td>
+
+                                            </tr>
+
+                                            <tr>
+                                                <td>2017/02/6</td>
+                                                <td>Saliya</td>
+                                                <td>19KG</td>
+
+                                            </tr>*@
+
+
+                                    </tbody>
+                                </table>
+                                <ul class="pagination pagination-sm pull-right">
+                                    <li>
+                                        <a href="javascript:;"> <i class="fa fa-angle-left"></i> </a>
+                                    </li>
+
+                                    <li class="active"> <a href="javascript:;">1</a> </li>
+
+                                    <li>
+                                        <a href="javascript:;"> <i class="fa fa-angle-right"></i> </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- End Supplier Wise Detail -->
+        <!-- Route Wise Detail -->
+
+        <div class="row" id="leafcol-route-wise-detail-resultTable" style="display:none">
+
+            <div class="panel panel-default ">
+                <div class="panel-heading bg-green">
+                    <h3 class="panel-title">Leaf Collection Details<span class="closer">X</span></h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="panel panel-default panel-fill">
+                                <div class="panel-heading personal-class">
+                                    <h3 class="panel-title"><span class="bg-green sup-details-icon"><i class="fa fa-user"></i></span> Route Details</h3>
+                                </div>
+                                <div class="panel-body text-left supplier-body bg-light-green">
+                                    <h4 style="color:#fff">
+                                        <strong>Number : </strong> A1005
+                                        <br>
+                                        <strong>Name : </strong> Ambewela
+                                    </h4>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr class="bg-green-2">
+                                            <th>Date</th>
+                                            <th>Collection Officer</th>
+                                            <th>Collection</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr v-for="lst in routeSummary">
+                                            <td>{{lst.date}}</td>
+                                            <td><a href="#">{{lst.collectionOfficer}}</a></td>
+                                            <td>{{lst.collectionAmount}}</td>
+                                            <td><a href="javascript:void(0);" class="openSupDetails btn btn-inverse waves-effect waves-light btn-xs  m-b-5">+</a></td>
+
+                                        </tr>
+                                        @*<tr>
+                                            <td>2017/02/2</td>
+                                            <td><a href="#">Jinadasa</a></td>
+                                            <td>11KG</td>
+                                            <td><a href="javascript:void(0);" class="openSupDetails btn btn-inverse waves-effect waves-light btn-xs  m-b-5">+</a></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>2017/02/3</td>
+                                            <td><a href="#">Abeyweera</a></td>
+                                            <td>33KG</td>
+                                            <td><a href="javascript:void(0);" class="openSupDetails btn btn-inverse waves-effect waves-light btn-xs  m-b-5">+</a></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>2017/02/4</td>
+                                            <td><a href="#">Jinadasa</a></td>
+                                            <td>45KG</td>
+                                            <td><a href="javascript:void(0);" class="openSupDetails btn btn-inverse waves-effect waves-light btn-xs  m-b-5">+</a></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>2017/02/5</td>
+                                            <td><a href="#">Abeyweera</a></td>
+                                            <td>12KG</td>
+                                            <td><a href="javascript:void(0);" class="openSupDetails btn btn-inverse waves-effect waves-light btn-xs  m-b-5">+</a></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>2017/02/6</td>
+                                            <td><a href="#">Saliya</a></td>
+                                            <td>19KG</td>
+                                            <td><a href="javascript:void(0);" class="openSupDetails btn btn-inverse waves-effect waves-light btn-xs  m-b-5">+</a></td>
+                                        </tr>*@
+
+
+                                    </tbody>
+                                </table>
+                                <ul class="pagination pagination-sm pull-right">
+                                    <li>
+                                        <a href="javascript:;"> <i class="fa fa-angle-left"></i> </a>
+                                    </li>
+
+                                    <li class="active"> <a href="javascript:;">1</a> </li>
+
+                                    <li>
+                                        <a href="javascript:;"> <i class="fa fa-angle-right"></i> </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- End Route Wise Detail -->
+        <!-- Route wise Daily Details -->
+
+        <div class="row" id="leafcol-route-wise-daily-detail-resultTable" style="display:none">
+
+            <div class="panel panel-default ">
+                <div class="panel-heading bg-green">
+                    <h3 class="panel-title">Leaf Collection Details<span class="closer">X</span></h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="panel panel-default panel-fill">
+                                <div class="panel-heading personal-class">
+                                    <h3 class="panel-title"><span class="bg-green sup-details-icon"><i class="fa fa-user"></i></span> Daily Collection Details</h3>
+                                </div>
+                                <div class="panel-body text-left supplier-body bg-light-green">
+                                    <h4 style="color:#fff">
+                                        <strong>Number : </strong> A1005
+                                        <br>
+                                        <strong>Name : </strong> Ambewela
+                                        <br>
+                                        <strong>Date : </strong> 2017/02/01
+                                        <br>
+                                        <strong>Collection Officer : </strong> Jinadasa
+                                    </h4>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr class="bg-green-2">
+                                            <th>Supplier Number</th>
+                                            <th>Supplier Name</th>
+                                            <th>Collection</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr v-for="lst in routeDailySummary">
+                                            <td><a href="#">{{lst.supplierNumber}}</a></td>
+                                            <td>{{lst.supplierName}}</td>
+                                            <td>{{lst.collectionAmount}}</td>
+
+                                        </tr>
+                                        @*<tr>
+                                            <td><a href="#">21345</a></td>
+                                            <td>Pasan</td>
+                                            <td>11KG</td>
+
+                                        </tr>
+
+                                        <tr>
+                                            <td><a href="#">15448</a></td>
+                                            <td>Abeyweera</td>
+                                            <td>33KG</td>
+
+                                        </tr>
+
+                                        <tr>
+                                            <td><a href="#">24587</a></td>
+                                            <td>Isuru</td>
+                                            <td>45KG</td>
+
+                                        </tr>*@
+                                    </tbody>
+                                </table>
+                                <ul class="pagination pagination-sm pull-right">
+                                    <li>
+                                        <a href="javascript:;"> <i class="fa fa-angle-left"></i> </a>
+                                    </li>
+
+                                    <li class="active"> <a href="javascript:;">1</a> </li>
+
+                                    <li>
+                                        <a href="javascript:;"> <i class="fa fa-angle-right"></i> </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- End Route wise Daily Details -->
+    </div>
+    <!-- container -->
+
+</div>
+<!-- content -->
+<!-- Right Sidebar -->
+<div class="side-bar right-bar nicescroll">
+    <h4 class="text-center">Quick Links</h4>
+    <div class="contact-list nicescroll">
+        <ul class="list-group contacts-list">
+            <li class="list-group-item">
+                <a href="#">
+                    link one
+                </a>
+                <span class="clearfix"></span>
+            </li>
+
+        </ul>
+    </div>
+</div>
+<!-- /Right-bar -->
+<!--Morris Chart-->
+<script src="assets/plugins/morris/morris.min.html"></script>
+<script src="assets/plugins/raphael/raphael-min.js"></script>
+<script src="assets/pages/morris.init.js"></script>
+
+<script src="assets/plugins/select2/dist/js/select2.min.js" type="text/javascript"></script>
+<script src="assets/plugins/tagsinput/jquery.tagsinput.min.js"></script>
+<script type="text/javascript" src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="assets/plugins/jquery-multi-select/jquery.multi-select.js"></script>
+<script type="text/javascript" src="assets/plugins/jquery-multi-select/jquery.quicksearch.js"></script>
+<script src="~/Scripts/silverTip/Summary.js"></script>
+
+<script>
+    var data = [
+ { y: '1', a: 50, b: 90 },
+ { y: '2', a: 65, b: 75 },
+ { y: '3', a: 50, b: 50 },
+ { y: '4', a: 75, b: 60 },
+ { y: '5', a: 80, b: 65 }
+    ],
+config = {
+    data: data,
+    xkey: 'y',
+    ykeys: ['a', 'b'],
+    labels: ['Total Income', 'Total Outcome'],
+    fillOpacity: 0.6,
+    hideHover: 'auto',
+    behaveLikeLine: true,
+    resize: true,
+    pointFillColors: ['#ffffff'],
+    pointStrokeColors: ['black'],
+    lineColors: ['gray', 'red']
+};
+    config.element = 'morris-bar-example';
+    Morris.Area(config);
+</script>
+
+<script>
+    $('.openleafCol').click(function () {
+        $('#leafcol-detail-resultTable').show();
+        $('#leafcol-resultTable').hide();
+        $('#leafcol-daterange-resultTable').hide();
+        $('#leafcol-routenam-resultTable').hide();
+        $('#leafcol-route-wise-detail-resultTable').show();
+    });
+
+
+    $('.openleafCol-Route').click(function () {
+        $('#leafcol-route-wise-detail-resultTable').show();
+        $('#leafcol-routenam-resultTable').hide();
+        $('#leafcol-detail-resultTable').hide();
+        $('#leafcol-resultTable').hide();
+    });
+
+
+    $('.openSupDetails').click(function () {
+        $('#leafcol-route-wise-detail-resultTable').hide();
+        $('#leafcol-routenam-resultTable').hide();
+        $('#leafcol-detail-resultTable').hide();
+        $('#leafcol-resultTable').hide();
+        $('#leafcol-route-wise-daily-detail-resultTable').show()
+    });
+
+
+
+
+
+    $('#leafcol-detail-resultTable .closer').click(function () {
+        $('#leafcol-detail-resultTable').hide();
+        $('#leafcol-resultTable').show();
+    });
+
+    $('#leafcol-route-wise-detail-resultTable  .closer').click(function () {
+        $('#leafcol-route-wise-detail-resultTable').hide();
+        $('#leafcol-routenam-resultTable').show();
+    });
+
+    $('#leafcol-route-wise-daily-detail-resultTable .closer').click(function () {
+        $('#leafcol-route-wise-daily-detail-resultTable').hide();
+        $('#leafcol-route-wise-detail-resultTable').show();
+    });
+
+
+
+</script>
+
+
+
+
+<script>
+
+    $(document).ready(function () {
+        var ur = $('.active a').attr("href");
+        if (ur == 'leaf-collection-summary.html') {
+            $(".list-unstyled").css("display", "block");
+        }
+    })
+
+
+    jQuery(document).ready(function () {
+
+
+
+
+
+        $('.toggleCurrent').click(function () {
+            $('#leafcol-daterange-resultTable').hide();
+            $('#leafcol-resultTable').show();
+        });
+
+        $('.toggleRouteCurrent').click(function () {
+            $('#leafcol-route-daterange-resultTable').hide();
+            $('#leafcol-routenam-resultTable').show();
+        });
+
+
+
+        // Date Picker
+        $('#datepicker').datepicker();
+
+        $('#datepicker2').datepicker();
+        $('#datepicker').val('');
+        $('#datepicker2').val('');
+
+        $('#monthpicker').datepicker({
+            format: "mm/yyyy",
+            startView: "year",
+            minViewMode: "months"
+        })
+
+        $('#monthpicker2').datepicker({
+            format: "mm/yyyy",
+            startView: "year",
+            minViewMode: "months"
+        })
+
+    });
+
+    jQuery(".select2").select2({
+        width: '100%'
+    });
+
+    $(window).scroll(function () {
+        var height = $(window).scrollTop();
+
+        if (height > 100) {
+
+        }
+    });
+
+
+    function showTable() {
+
+        //var Date = $('#datepicker').datepicker("getDate");
+
+
+
+        if ($("#datepicker").val() == "" && $("#supID").val() == "") {
+
+            $('#leafcol-route-wise-detail-resultTable').hide();
+            $('#leafcol-routenam-resultTable').show();
+            $('#leafcol-route-daterange-resultTable').hide();
+            $('#leafcol-detail-resultTable').hide();
+            $('#leafcol-resultTable').hide();
+            $('#leafcol-route-wise-daily-detail-resultTable').hide()
+            $('#leafcol-daterange-resultTable').hide();
+        }
+
+        else if (!$("#supID").val() == "") {
+            $('#leafcol-route-wise-detail-resultTable').hide();
+            $('#leafcol-routenam-resultTable').hide();
+            $('#leafcol-route-daterange-resultTable').hide();
+            $('#leafcol-detail-resultTable').hide();
+            $('#leafcol-resultTable').hide();
+            $('#leafcol-route-wise-daily-detail-resultTable').hide()
+            $('#leafcol-daterange-resultTable').show();
+        }
+        else if (!$("#datepicker").val() == "" && $("#supID").val() == "") {
+            $('#leafcol-route-wise-detail-resultTable').hide();
+            $('#leafcol-routenam-resultTable').hide();
+            $('#leafcol-route-daterange-resultTable').show();
+            $('#leafcol-detail-resultTable').hide();
+            $('#leafcol-resultTable').hide();
+            $('#leafcol-route-wise-daily-detail-resultTable').hide()
+            $('#leafcol-daterange-resultTable').hide();
+        }
+        else {
+            $('#leafcol-route-wise-detail-resultTable').hide();
+            $('#leafcol-routenam-resultTable').show();
+            $('#leafcol-route-daterange-resultTable').hide();
+            $('#leafcol-detail-resultTable').hide();
+            $('#leafcol-resultTable').hide();
+            $('#leafcol-route-wise-daily-detail-resultTable').hide()
+            $('#leafcol-daterange-resultTable').hide();
+        }
+    }
+
+
+    function showSupp() {
+
+        $('#leafcol-route-wise-detail-resultTable').hide();
+        $('#leafcol-routenam-resultTable').hide();
+        $('#leafcol-route-daterange-resultTable').hide();
+        $('#leafcol-detail-resultTable').hide();
+        $('#leafcol-resultTable').show();
+        $('#leafcol-route-wise-daily-detail-resultTable').hide()
+        $('#leafcol-daterange-resultTable').hide();
+    }
+</script>
+
+

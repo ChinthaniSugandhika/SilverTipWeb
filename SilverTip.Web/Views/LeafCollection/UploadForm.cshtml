@@ -1,0 +1,335 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Start content -->
+<div class="content">
+
+    <div class="container">
+
+        <!-- Page-Title -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-3 title-start">
+                        <span>Upload Leaf Collection Details</span>
+                    </div>
+
+                    <div class="col-md-9 title-end">
+
+                        <ol class="breadcrumbs pull-right">
+                            <li>Home </li>
+                            <li>Leaf Collection</li>
+                            <li class="active">Upload Leaf Collection</li>
+                        </ol>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="leaf-collection">
+                <div class="col-md-6">
+                    <div class="panel panel-default panel-fill">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Upload Leaf Collection Details form File</h3>
+
+                        </div>
+                        <div class="panel-body">
+                            <div class="col-md-12 portlets">
+                                <div class="m-b-30">
+                                    <form action="#" class="upload-tea dropzone" id="dropzone">
+                                        <div class="fallback">
+                                            <input name="file" type="file" multiple="multiple">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12" id="uploaddetails" style="display:none">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-hover">
+                                        <thead>
+                                            <tr>
+
+                                                <th>Route</th>
+                                                <th>Supplier Reg No:</th>
+                                                <th>Collection Officer </th>
+                                                <th>Weight</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Ambewela</td>
+                                                <td>012547</td>
+                                                <td>Jinadasa</td>
+                                                <td>61KG</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Nuwara-Eliya</td>
+                                                <td>012547</td>
+                                                <td>Ashoka</td>
+                                                <td>11KG</td>
+                                            </tr>
+
+                                            <tr class="leafcolerror" data-toggle="tooltip" data-placement="right" title="Supplier Number">
+                                                <td>Bandarawela</td>
+                                                <td>12223</td>
+                                                <td>Vishan</td>
+                                                <td>31KG</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ambewela</td>
+                                                <td>655443</td>
+                                                <td>Pradeep</td>
+                                                <td>22KG</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ambewela</td>
+                                                <td>012547</td>
+                                                <td>Jinadasa</td>
+                                                <td>61KG</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Nuwara-Eliya</td>
+                                                <td>012547</td>
+                                                <td>Ashoka</td>
+                                                <td>11KG</td>
+                                            </tr>
+
+                                            <tr class="leafcolerror" data-toggle="tooltip" data-placement="right" title="Incorrect Weight">
+                                                <td>Bandarawela</td>
+                                                <td>12223</td>
+                                                <td>Vishan</td>
+                                                <td>31K</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ambewela</td>
+                                                <td>655443</td>
+                                                <td>Pradeep</td>
+                                                <td>22KG</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="row">
+                                    <br>
+                                    <div class="form-group" id="leafcolerror-message">
+                                        <label class="col-md-12 control-label text-left">
+                                            <span class="stats-message">* 8 Records</span>
+                                            <br>
+                                            <span class="leafcolerror-message">* 1 Missing supplier number</span>
+                                            <br>
+                                            <span class="leafcolerror-message">* 1 Incorrect Weight</span>
+                                        </label>
+
+                                    </div>
+
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <a href="javascript:;" class="btn btn-danger cancelfacility waves-effect waves-light btn-sm m-b-5" id="cancelupload" style="display:none"><i class="fa fa-ban" aria-hidden="true"></i> Cancel</a>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group text-right">
+                                            <a href="javascript:;" class="btn btn-success updatefacility waves-effect waves-light btn-sm" id="approveupload" style="display:none"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Review and Confirm</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-default panel-fill bg-green-2-border">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Leaf Collection Details <span class="pull-right bg-green-2-text">02/07/2017</span></h3>
+
+                        </div>
+                        <div class="panel-body">
+
+                            <table id="datatable" class="table table-bordered">
+                                <thead>
+                                    <tr class="bg-green-2">
+                                        <th>Route</th>
+                                        <th>Supplier Reg No:</th>
+                                        <th>Collection Officer </th>
+                                        <th>Weight</th>
+                                    </tr>
+                                </thead>
+
+
+                                <tbody id="teacoltable-details">
+                                    <tr v-for="lst in leafCollectionDetails">
+                                        <td>{{lst.route}}</td>
+                                        <td>{{lst.sipplierRegistrationNumber}}</td>
+                                        <td>{{lst.collectionOfficer}}</td>
+                                        <td>{{lst.weight}}</td>
+                                    </tr>
+                                    @*<tr>
+                                        <td>Ambewela</td>
+                                        <td>225444</td>
+                                        <td>Jinadasa</td>
+                                        <td>51KG</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nuwara-Eliya</td>
+                                        <td>778425</td>
+                                        <td>Abeynayaka</td>
+                                        <td>12KG</td>
+                                    </tr>*@
+
+                                </tbody>
+                            </table>
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- container -->
+
+</div>
+<!-- content -->
+
+<!-- Right Sidebar -->
+<div class="side-bar right-bar nicescroll">
+    <h4 class="text-center">Quick Links</h4>
+    <div class="contact-list nicescroll">
+        <ul class="list-group contacts-list">
+            <li class="list-group-item">
+                <a href="#">
+                    link one
+                </a>
+                <span class="clearfix"></span>
+            </li>
+
+        </ul>
+    </div>
+</div>
+<!-- /Right-bar -->
+
+<!-- Main  -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/detect.js"></script>
+<script src="assets/js/fastclick.js"></script>
+<script src="assets/js/jquery.slimscroll.js"></script>
+<script src="assets/js/jquery.blockUI.js"></script>
+<script src="assets/js/waves.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/jquery.nicescroll.js"></script>
+<script src="assets/js/jquery.scrollTo.min.js"></script>
+
+
+
+
+<script src="assets/js/jquery.app.js"></script>
+
+
+<script src="assets/plugins/select2/dist/js/select2.min.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+
+
+<!-- Page Specific JS Libraries -->
+<script src="assets/plugins/dropzone/dist/dropzone.js"></script>
+
+<script src="~/Scripts/silverTip/uploadForm.js"></script>
+
+
+
+
+
+<script>
+
+                $(document).ready(function(){
+  var ur = $('.active a').attr( "href" );
+  if(ur == 'upload-leaf-collection.html'){
+    $(".list-unstyled").css("display","block");
+  }
+})
+        jQuery(document).ready(function () {
+            // Date Picker
+            jQuery('#datepicker').datepicker();
+            jQuery('#datepicker-inline').datepicker();
+            jQuery('#datepicker-multiple').datepicker({
+                numberOfMonths: 3,
+                showButtonPanel: true
+            });
+
+            $('[data-toggle="tooltip"]').tooltip({
+                animation: true,
+                placement: "right"
+            });
+        });
+
+        jQuery(".select2").select2({
+            width: '100%'
+        });
+
+        $(window).scroll(function () {
+            var height = $(window).scrollTop();
+
+            if (height > 100) {
+
+            }
+        });
+</script>
+
+<script>
+        $('#sup-number2').change(function () {
+            var id = $("#sup-number2 option:selected").text();
+            if (id == "00001") {
+                $('#sup-name-lable2').html("Saman Kumara");
+            } else if (id == "00002") {
+                $('#sup-name-lable2').html("Saman Kumara 2");
+            } else if (id == "00003") {
+                $('#sup-name-lable2').html("Saman Kumara 3");
+            }
+
+            $('#sup-number2').parents().parent().removeClass("leafcolerror");
+            $('#sup-name2').removeClass("leafcolerror");
+
+            $('#leafcolerror-message').hide();
+
+        });
+
+
+        Dropzone.autoDiscover = false;
+        var myDropzone = new Dropzone("#dropzone");
+        $(function () {
+
+            myDropzone.on("complete", function (file) {
+                $('#uploaddetails').show();
+                $('#cancelupload').show();
+                $('#approveupload').show();
+            });
+
+        });
+
+        $('#cancelupload').click(function () {
+            myDropzone.removeAllFiles();
+            $('#uploaddetails').hide();
+            $('#cancelupload').hide();
+            $('#approveupload').hide();
+        });
+</script>
+
+

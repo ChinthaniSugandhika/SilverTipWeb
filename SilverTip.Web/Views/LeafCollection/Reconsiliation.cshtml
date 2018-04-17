@@ -1,0 +1,596 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!-- Start content -->
+<div class="content">
+    <div class="container">
+        <!-- Page-Title -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-3 title-start">
+                        <span>Leaf Reconciliation</span>
+                    </div>
+
+                    <div class="col-md-9 title-end">
+
+                        <ol class="breadcrumbs pull-right">
+                            <li>Home </li>
+                            <li>Leaf Collection</li>
+                            <li class="active">Leaf Reconciliation</li>
+                        </ol>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="leaf-collection">
+                <div class="col-md-12">
+                    <div class="panel panel-default ">
+                        <div class="panel-heading bg-green">
+                            <h3 class="panel-title">Leaf Collection</h3>
+                            <div style="float:right; margin-top: -32px;">
+                                <div class="form-group col-md-10 pull-right" style="line-height:30px;">
+                                    <button id="monthpicker2" type="button" class="btn btn-default dropdown-toggle waves-effect" data- toggle="dropdown" aria-expanded="false">Month <span class="caret"></span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="table-responsive">
+                                        <table class="table table-recon">
+                                            <thead>
+                                                <tr>
+                                                    <th>Date</th>
+                                                    <th>Route</th>
+                                                    <th>Collection Officer</th>
+                                                    <th colspan="2">Field Weight</th>
+                                                    <th colspan="2">Factory Weight</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td>Gross</td>
+                                                    <td>Nett</td>
+                                                    <td>Gross</td>
+                                                    <td>Nett</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2017-02-09</td>
+                                                    <td>A1005</td>
+                                                    <td>Jayathissa</td>
+                                                    <td>300KG</td>
+                                                    <td>300KG</td>
+                                                    <td>300KG</td>
+                                                    <td>300KG</td>
+                                                    <td><a href="javascript:void(0);" class="openMod btn btn-inverse waves-effect waves-light btn-xs m-b-5" data-toggle="modal" data-target="#panel-modal">+</a></td>
+                                                </tr>
+                                                <tr></tr>
+                                            </tbody>
+                                        </table>
+
+                                        <style>
+                                            .table {
+                                                border-collapse: collapse;
+                                            }
+
+                                                .table tr th,
+                                                .table tr td {
+                                                    text-align: center;
+                                                }
+                                        </style>
+
+                                        <div id="panel-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none">
+                                            <div class="modal-dialog modal-full">
+                                                <div class="modal-content p-0 b-0">
+                                                    <div class="panel">
+                                                        <div class="panel-heading bg-green">
+                                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                            <h3 class="panel-title">Panel Primary</h3>
+                                                        </div>
+                                                        <div class="panel-body">
+                                                            <ul class="nav nav-tabs tabs">
+
+                                                                <li class="active tab">
+                                                                    <a href="#profile-2" data-toggle="tab" aria-expanded="false">
+                                                                        <span class="visible-xs"><i class="fa fa-user"></i></span>
+                                                                        <span class="hidden-xs"><i class="fa fa-upload"></i>  Upload File</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="tab">
+                                                                    <a href="#home-2" data-toggle="tab" aria-expanded="false">
+                                                                        <span class="visible-xs"><i class="fa fa-home"></i></span>
+                                                                        <span class="hidden-xs"><i class="fa fa-pencil-square-o"></i> Enter Manually</span>
+                                                                    </a>
+                                                                </li>
+
+
+                                                            </ul>
+                                                            <div class="tab-content">
+                                                                <div class="tab-pane" id="home-2">
+                                                                    <!---->
+                                                                    <div class="recon-select">
+                                                                        <div class="row">
+
+                                                                            <div class="col-md-2">
+                                                                                <div class="radio radio-success radio-inline">
+                                                                                    <input type="radio" id="inlineRadio1" value="option1" name="radioInline" checked="checked">
+                                                                                    <label for="inlineRadio1"> Box </label>
+                                                                                </div>
+                                                                                <div class="radio radio-success radio-inline">
+                                                                                    <input type="radio" id="inlineRadio2" value="option1" name="radioInline" s>
+                                                                                    <label for="inlineRadio1"> Bag </label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-6">
+                                                                                <div class="form-horizontal">
+
+                                                                                    <div class="form-group">
+                                                                                        <label class="col-md-6 control-label " style="text-align:center;">Collection Officer Name <span class="text-danger"> *</span></label>
+                                                                                        <div class="col-md-6">
+
+                                                                                            <select class="select2 form-control select2-offscreen" data-placeholder="text" placeholder="Type" style="height:34px !important" tabindex="-1" title="">
+                                                                                                <option value="#">Jinasena</option>
+                                                                                                <option value="United States">Sajith</option>
+                                                                                                <option value="United Kingdom">Jayaweera</option>
+                                                                                            </select>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-4">
+                                                                                <div class="form-horizontal">
+
+                                                                                    <div class="form-group">
+                                                                                        <label class="col-md-6 control-label" style="text-align:center !important;">Route Name <span class="text-danger"> *</span></label>
+                                                                                        <div class="col-md-6">
+
+                                                                                            <select class="select2 form-control select2-offscreen" data-placeholder="text" placeholder="Type" style="height:34px !important" tabindex="-1" title="">
+                                                                                                <option value="#">Ambewela</option>
+                                                                                                <option value="United States">Avissawella</option>
+                                                                                                <option value="United Kingdom">Dambulla</option>
+                                                                                            </select>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+
+
+
+
+                                                                        <div class="col-md-6 form-horizontal">
+                                                                            <div class="panel panel-default panel-fill">
+                                                                                <div class="panel-body">
+                                                                                    <div class="form-horizontal col-md-10 col-md-offset-1">
+
+
+                                                                                        <div class="row">
+
+                                                                                            <div class="col-md-12">
+                                                                                                <div class="form-group">
+                                                                                                    <label class="col-sm-6 control-label text-left">Gross Weight</label>
+                                                                                                    <div class="col-sm-6">
+                                                                                                        <p class="paying total-pay"><input value="43KG"></p>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+
+                                                                                        </div>
+                                                                                        <div class="row">
+                                                                                            <div class="col-md-12">
+                                                                                                <div class="form-group">
+                                                                                                    <label class="col-sm-6 control-label">Box Weight</label>
+                                                                                                    <div class="col-sm-6">
+                                                                                                        <p class="paying pay-amount"><input value="25KG"></p>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+
+
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+
+
+                                                                        <!-----------------  Other Deductions ----------------->
+
+
+                                                                        <div class="col-md-6 sup-issue-tea-panel">
+
+                                                                            <div class="panel panel-default panel-fill">
+
+                                                                                <div class="panel-heading">
+                                                                                    <h3 class="panel-title">Deductions</h3>
+
+                                                                                </div>
+                                                                                <div class="panel-body">
+                                                                                    <div class="col-md-12  form-horizontal">
+
+
+                                                                                        <div class="form-group">
+                                                                                            <label class="col-md-5 control-label text-left">Boil Weight <span class="text-danger"> *</span></label>
+                                                                                            <div class="col-md-7">
+                                                                                                <input value="" class="form-control" type="text">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="form-group">
+                                                                                            <label class="col-md-5 control-label text-left">Moist Weight <span class="text-danger"> *</span></label>
+                                                                                            <div class="col-md-7">
+                                                                                                <input value="" class="form-control" type="text">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="form-group">
+                                                                                            <label class="col-md-5 control-label text-left">Route Deduction % <span class="text-danger"> *</span></label>
+                                                                                            <div class="col-md-7">
+                                                                                                <input value="" class="form-control" type="text">
+                                                                                            </div>
+                                                                                        </div>
+
+
+                                                                                        <div class="form-group has-error">
+                                                                                            <label class="col-md-5 control-label text-left" style="text-align:left !important;">Total Deduction</label>
+                                                                                            <div class="col-md-7">
+                                                                                                <input class="form-control form-control-red text-left" type="text">
+                                                                                            </div>
+                                                                                        </div>
+
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+
+
+
+                                                                    </div>
+
+                                                                    <div class="row">
+                                                                        <div class="col-md-6">
+
+                                                                        </div>
+
+                                                                        <div class="col-md-6 form-horizontal">
+                                                                            <div class="panel panel-default panel-fill">
+                                                                                <div class="panel-body">
+
+                                                                                    <div class="col-md-12">
+                                                                                        <div class="form-group has-success">
+                                                                                            <label class="col-md-5 control-label text-left">Net Weight</label>
+                                                                                            <div class="col-sm-7">
+                                                                                                <label class="control-label facility-lable-add text-center">
+                                                                                                    345KG
+                                                                                                </label>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+
+
+
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="row">
+                                                                        <div class="col-md-10"></div>
+                                                                        <div class="col-md-1">
+                                                                            <div class="form-group ">
+                                                                                <a href="javascript:;" class="btn btn-danger cancelfacility waves-effect waves-light btn-sm m-b-5" onclick="removefacilityadd('cash');"><i class="fa fa-ban" aria-hidden="true"></i> Cancel</a>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-1 text-center">
+                                                                            <div class="form-group text-right">
+                                                                                <a href="javascript:;" class="btn btn-success updatefacility waves-effect waves-light btn-sm m-b-5"><i class="fa fa-pencil-square-o" aria-hidden="true" onclick="updatefacilityadd('cash');"></i> Update</a>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+
+
+                                                                </div>
+                                                                <div class="tab-pane  active" id="profile-2">
+
+                                                                    <div class="panel panel-default panel-fill">
+                                                                        <div class="panel-heading">
+                                                                            <h3 class="panel-title">Upload from File</h3>
+
+                                                                        </div>
+                                                                        <div class="panel-body">
+                                                                            <div class="col-md-12 portlets">
+                                                                                <div class="m-b-30">
+                                                                                    <form action="#" class="upload-tea dropzone" id="dropzone">
+                                                                                        <div class="fallback">
+                                                                                            <input name="file" type="file" multiple="multiple">
+                                                                                        </div>
+                                                                                    </form>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="col-md-12" id="uploaddetails" style="display:none">
+                                                                                <div class="">
+                                                                                    <table class="table table-hover">
+                                                                                        <thead>
+                                                                                            <tr>
+
+                                                                                                <th>Route</th>
+                                                                                                <th>Type</th>
+                                                                                                <th>Collection Officer </th>
+                                                                                                <th>Deduction</th>
+                                                                                                <th>Net Weight</th>
+                                                                                                <th></th>
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td>Ambewela</td>
+                                                                                                <td>Box</td>
+                                                                                                <td>Jinadasa</td>
+                                                                                                <td>11KG</td>
+                                                                                                <td>61KG</td>
+                                                                                                <td>
+
+                                                                                                    <a href="javascript:void(0);" class="weight-class btn btn-inverse waves-effect waves-light btn-xs m-b-5">+</a>
+
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td>Nuwara-Eliya</td>
+                                                                                                <td>Box</td>
+                                                                                                <td>Ashoka</td>
+                                                                                                <td>1KG</td>
+                                                                                                <td>11KG</td>
+                                                                                                <td><a href="javascript:void(0);" class="weight-class btn btn-inverse waves-effect waves-light btn-xs m-b-5">+</a></td>
+                                                                                            </tr>
+
+                                                                                            <tr class="leafcolerror" data-toggle="tooltip" data-placement="right" title="Type Invalid">
+                                                                                                <td>Bandarawela</td>
+                                                                                                <td>B</td>
+                                                                                                <td>Vishan</td>
+                                                                                                <td>6KG</td>
+                                                                                                <td>31KG</td>
+                                                                                                <td><a href="javascript:void(0);" class="weight-class btn btn-inverse waves-effect waves-light btn-xs m-b-5">+</a></td>
+                                                                                            </tr>
+
+                                                                                            <tr>
+                                                                                                <td>Nuwara-Eliya</td>
+                                                                                                <td>Bag</td>
+                                                                                                <td>Ashoka</td>
+                                                                                                <td>2.5KG</td>
+                                                                                                <td>21KG</td>
+                                                                                                <td><a href="javascript:void(0);" class="weight-class btn btn-inverse waves-effect waves-light btn-xs m-b-5">+</a></td>
+                                                                                            </tr>
+
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <br>
+                                                                                    <div class="form-group" id="leafcolerror-message">
+                                                                                        <label class="col-md-12 control-label text-left">
+                                                                                            <span class="stats-message">* 4 Records</span>
+                                                                                            <br>
+                                                                                            <span class="leafcolerror-message">* 1 Type Missing</span>
+
+
+                                                                                        </label>
+
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <br>
+                                                                                <div class="row">
+                                                                                    <div class="col-md-6">
+                                                                                        <a href="javascript:;" class="btn btn-danger cancelfacility waves-effect waves-light btn-sm m-b-5" id="cancelupload" style="display:none"><i class="fa fa-ban" aria-hidden="true"></i> Cancel</a>
+                                                                                    </div>
+                                                                                    <div class="col-md-6">
+                                                                                        <div class="form-group text-right">
+                                                                                            <a href="javascript:;" class="btn btn-success updatefacility waves-effect waves-light btn-sm" id="approveupload" style="display:none"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Review and Confirm</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                            </div>
+
+
+                                                                        </div>
+                                                                    </div>
+
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+
+                                        <ul class="pagination pagination-sm pull-right">
+                                            <li>
+                                                <a href="javascript:;"> <i class="fa fa-angle-left"></i> </a>
+                                            </li>
+                                            <li class="active"> <a href="javascript:;">1</a> </li>
+                                            <li>
+                                                <a href="javascript:;"> <i class="fa fa-angle-right"></i> </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- container -->
+
+</div>
+<!-- content -->
+
+<!-- Right Sidebar -->
+<div class="side-bar right-bar nicescroll">
+    <h4 class="text-center">Quick Links</h4>
+    <div class="contact-list nicescroll">
+        <ul class="list-group contacts-list">
+            <li class="list-group-item">
+                <a href="#">
+                    link one
+                </a>
+                <span class="clearfix"></span>
+            </li>
+
+        </ul>
+    </div>
+</div>
+<!-- /Right-bar -->
+
+<!-- Main  -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/detect.js"></script>
+<script src="assets/js/fastclick.js"></script>
+<script src="assets/js/jquery.slimscroll.js"></script>
+<script src="assets/js/jquery.blockUI.js"></script>
+<script src="assets/js/waves.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/jquery.nicescroll.js"></script>
+<script src="assets/js/jquery.scrollTo.min.js"></script>
+
+
+<!-- Datatables-->
+<script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="assets/plugins/datatables/dataTables.bootstrap.js"></script>
+<script src="assets/plugins/datatables/dataTables.buttons.min.js"></script>
+<script src="assets/plugins/datatables/buttons.bootstrap.min.js"></script>
+<script src="assets/plugins/datatables/jszip.min.js"></script>
+<script src="assets/plugins/datatables/pdfmake.min.js"></script>
+<script src="assets/plugins/datatables/vfs_fonts.js"></script>
+<script src="assets/plugins/datatables/buttons.html5.min.js"></script>
+<script src="assets/plugins/datatables/buttons.print.min.js"></script>
+<script src="assets/plugins/datatables/dataTables.fixedHeader.min.js"></script>
+<script src="assets/plugins/datatables/dataTables.keyTable.min.js"></script>
+<script src="assets/plugins/datatables/dataTables.responsive.min.js"></script>
+<script src="assets/plugins/datatables/responsive.bootstrap.min.js"></script>
+<script src="assets/plugins/datatables/dataTables.scroller.min.js"></script>
+
+<!-- Datatable init js -->
+<script src="assets/pages/datatables.init.js"></script>
+
+
+<!-- Page Specific JS Libraries -->
+<script src="assets/plugins/dropzone/dist/dropzone.js"></script>
+
+<script src="assets/js/jquery.app.js"></script>
+
+
+<script src="assets/plugins/select2/dist/js/select2.min.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+
+
+<script>
+        $(document).ready(function () {
+            var ur = $('.active a').attr("href");
+            if (ur == 'leaf-reconciliation.html') {
+                $(".list-unstyled").css("display", "block");
+            }
+        })
+
+
+        jQuery(document).ready(function () {
+            // Date Picker
+            jQuery('#datepicker').datepicker();
+            jQuery('#datepicker-inline').datepicker();
+            jQuery('#datepicker-multiple').datepicker({
+                numberOfMonths: 3,
+                showButtonPanel: true
+            });
+
+
+        });
+
+        jQuery(".select2").select2({
+            width: '100%'
+        });
+
+        $(window).scroll(function () {
+            var height = $(window).scrollTop();
+
+            if (height > 100) {
+
+            }
+        });
+
+        $('#sup-number').change(function () {
+            var id = $("#sup-number option:selected").text();
+            if (id == "00001") {
+                $('#sup-name-lable').html("Saman Kumara");
+            } else if (id == "00002") {
+                $('#sup-name-lable').html("Saman Kumara 2");
+            } else if (id == "00003") {
+                $('#sup-name-lable').html("Saman Kumara 3");
+            }
+
+
+            $('#sup-name').show();
+        });
+
+
+
+        Dropzone.autoDiscover = false;
+        var myDropzone = new Dropzone("#dropzone");
+        $(function () {
+
+            myDropzone.on("complete", function (file) {
+                $('#uploaddetails').show();
+                $('#cancelupload').show();
+                $('#approveupload').show();
+            });
+
+        });
+
+
+        $('.weight-class').click(function(){
+
+            if ( $(this).hasClass("main-weight-class")){
+                $(this).removeClass("main-weight-class");
+                $(this).closest('td').removeClass("make-green");
+                $('.weight-have').remove();
+
+
+            }
+            else{
+                $(this).addClass("main-weight-class");
+                $(this).closest('td').addClass("make-green");
+                $(this).closest('tr').after("<tr  class='weight-have text-left make-green'><td colspan='6'><span class='recon-upload'><span class='weight'>Gross Weight: 43KG</span><span class='weight'> Box Weight: 16KG</span></span><span class='recon-upload'><span class='deduct'>Boil Weight: 12KG</span> <span class='deduct'>Moist Weight: 8KG</span> <span class='deduct'>Moist Weight: 3KG</span><span class='deduct'> Route Deduction: 10%</span></span></td></tr>");
+            }
+        })
+</script>
+
+

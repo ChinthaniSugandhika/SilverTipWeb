@@ -1,0 +1,1725 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Start content -->
+<div class="content">
+    <div class="child" style="display:none;">
+        <div class="row">
+            <div class="col-md-11">
+                <div class="overlay-content">
+                    <div class="row">
+                        <div class="sup-more-details">
+                            <div class="col-md-3">
+                                <a href="javascript:;" class="supplier-link" onclick="supload('personal');">
+                                    <div class="panel panel-default panel-fill">
+                                        <div class="panel-heading personal-class">
+                                            <h3 class="panel-title">
+                                                <span class="bg-green sup-details-icon">
+                                                    <i class="fa fa-user"></i>
+                                                </span> Personal Detals
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="javascript:;" class="supplier-link" onclick="supload('financial');">
+                                    <div class="panel panel-default panel-fill">
+                                        <div class="panel-heading financial-class">
+                                            <h3 class="panel-title">
+                                                <span class="bg-green sup-details-icon">
+                                                    <i class="fa fa-usd"></i>
+                                                </span> Account Detals
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="javascript:;" class="supplier-link" onclick="supload('facilities');">
+                                    <div class="panel panel-default panel-fill">
+                                        <div class="panel-heading facilities-class">
+                                            <h3 class="panel-title">
+                                                <span class="bg-green sup-details-icon">
+                                                    <i class="fa fa-handshake-o" aria-hidden="true"></i>
+                                                </span> Facilities
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="javascript:;" class="supplier-link" onclick="supload('tea');">
+                                    <div class="panel panel-default panel-fill">
+                                        <div class="panel-heading tea-class">
+                                            <h3 class="panel-title">
+                                                <span class="bg-green sup-details-icon">
+                                                    <i class="fa fa-leaf" aria-hidden="true"></i>
+                                                </span> Tea Collection
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="sup-main-details" >
+                            <div class="col-md-3" id="personalDetailHeading">
+                                <a href="javascript:;" class="supplier-link" onclick="supload('personal');">
+                                    <div class="panel panel-default panel-fill">
+                                        <div class="panel-body text-left supplier-body bg-light-green">
+                                            <p class="text-muted">
+                                                <strong>Reg :</strong>{{personalDetailHead.registrationNo}}
+                                                <br>
+                                                <strong>Name :</strong>{{personalDetailHead.fullName}}
+                                                <br>
+                                                <strong>Mobile :</strong>{{personalDetailHead.contactNumber}}
+                                                <br>
+                                                <strong>Route :</strong>{{personalDetailHead.routeName}}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3" id="financeDetailsHeading">
+                                <a href="javascript:;" class="supplier-link" onclick="supload('financial');">
+                                    <div class="panel panel-default panel-fill">
+                                        <div class="panel-body text-left supplier-body bg-light-green">
+                                            <p class="text-muted">
+                                                <strong>Payment Mode :</strong>{{displayDetails.paymentModeName}}
+                                                <br>
+                                                <strong>Account No :</strong>{{displayDetails.accountNumber}}
+                                                <br>
+                                                <strong>Bank :</strong>{{displayDetails.bankName}}
+                                                <br>
+                                                <strong>Branch :</strong>{{displayDetails.branch}}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            @*<div class="col-md-3">
+                                <a href="javascript:;" class="supplier-link" onclick="supload('facilities');">
+                                    <div class="panel panel-default panel-fill">
+                                        <div class="panel-body text-left supplier-body bg-light-green">
+                                            <p class="text-muted">
+                                                <strong>Gross Pay :</strong> 50,000
+                                                <br>
+                                                <strong>Previous Debt :</strong> 5,000
+                                                <br>
+                                                <strong>Cash Advance :</strong> 30,000
+                                                <br>
+                                                <strong>Current Balance :</strong> 2,000
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="javascript:;" class="supplier-link" onclick="supload('tea');">
+                                    <div class="panel panel-default panel-fill">
+                                        <div class="panel-body text-left supplier-body bg-light-green">
+                                            <p class="text-muted">
+                                                <strong>Crop :</strong> 345KG
+                                                <br>
+                                                <strong>Rate :</strong> 82.44
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>*@
+                            <br>
+                            <div id="updateSupplierPersonalDetails" class="col-md-12 sup-overlay personal" style="display:none;">
+                                <div class="panel panel-default panel-fill">
+                                    <span class="sup-more-details-close">X</span>
+                                    <div class="panel-body text-left supplier-moredetail-body">
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <!-- Personal-Details-Information --------------------------------------------------------------------------------------------------------------------------------- -->
+                                                <div class="panel panel-default panel-fill">
+                                                    <div class="panel-heading">
+                                                        <h3 class="panel-title">
+                                                            Supplier Details &nbsp;
+                                                            <span class="label label-success">
+                                                                Active
+                                                            </span>
+                                                        </h3>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <div class="col-md-6 form-horizontal">
+                                                            <div class="form-group">
+                                                                <label class="col-md-4 control-label text-left">
+                                                                    Registration No:
+                                                                    <span class="text-danger"> *</span>
+                                                                </label>
+                                                                <div class="col-md-8">
+                                                                    <input type="text" class="form-control" v-model="updatePersonalDetails.registrationNo">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="col-md-4 control-label text-left">
+                                                                    Full Name
+                                                                    <span class="text-danger"> *</span>
+                                                                </label>
+                                                                <div class="col-md-8">
+                                                                    <input type="text" class="form-control" v-model="updatePersonalDetails.fullName">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="col-md-4 control-label text-left">
+                                                                    Address
+                                                                    <span class="text-danger"> *</span>
+                                                                </label>
+                                                                <div class="col-md-8">
+                                                                    <textarea style="height: 100px" class="form-control" v-model="updatePersonalDetails.address"></textarea>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="col-md-4 control-label text-left">
+                                                                    Contact Number
+                                                                    <span class="text-danger"> *</span>
+                                                                </label>
+                                                                <div class="col-md-8">
+                                                                    <input type="text" class="form-control" v-model="updatePersonalDetails.contactNumber">
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-md-6 form-horizontal">
+
+                                                            <div class="form-group">
+                                                                <label class="col-md-4 control-label text-left">
+                                                                    &nbsp;&nbsp;Route
+                                                                    <span class="text-danger">
+                                                                        *
+                                                                    </span>
+                                                                </label>
+                                                                <div class="col-md-8">
+                                                                    <select class="select2 form-control" data-placeholder="Select a route..." style="height:34px !important" v-model="updatePersonalDetails.routes">
+                                                                        <option disabled value="">Select a route...</option>
+                                                                        <option v-for="route in routes" v-bind:value="route">
+                                                                            {{route.name}}
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label class="col-md-4 control-label text-left">
+                                                                    &nbsp;&nbsp;Type
+                                                                    <span class="text-danger"> *</span>
+                                                                </label>
+                                                                <div class="col-md-8">
+                                                                    <select class="select2 form-control" data-placeholder="text" placeholder="Type" style="height:34px !important" v-model="updatePersonalDetails.types">
+                                                                        <option disabled value="">Select Supplier Type</option>
+                                                                        <option v-for="type in types" v-bind:value="type">{{type.name}}</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="col-md-4 control-label text-left">
+                                                                    &nbsp;&nbsp;NIC
+                                                                </label>
+                                                                <div class="col-md-8">
+                                                                    <input type="text" class="form-control" v-model="updatePersonalDetails.nicNo">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Supplier-Details-Information -->
+                                            </div>
+                                        </div>
+                                        <small>
+                                            <label class="text-danger">(*) Mandatory</label>
+                                        </small>
+                                        <button class="btn btn-primary waves-effect waves-light w-md btn-xs pull-right" type="submit"  v-on:click="updateSupplierDetails">Update</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="updateSupplierFinancialDetails" class="col-md-12 sup-overlay financial" style="display:none;" v-on:click="getFinancialDetails">
+                                <div class="panel panel-default panel-fill">
+                                    <span class="sup-more-details-close">X</span>
+                                    <div class="panel-body text-left supplier-body">
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <!-- Account-Details-Information -->
+                                                <div class="panel panel-default panel-fill">
+                                                    <div class="panel-heading">
+                                                        <h3 class="panel-title">Financial Information</h3>
+                                                    </div>
+                                                    <div class="panel-body form-horizontal">
+                                                        <div class="form-group">
+                                                            <label class="col-md-4 control-label text-left">
+                                                                Payment Mode
+                                                                <span class="text-danger"> *</span>
+                                                            </label>
+                                                            <div class="col-md-8">
+                                                                <select class="select2 form-control" data-placeholder="text" placeholder="Type" style="height:34px !important" v-model="updateFinancialDetails.paymentModes">
+                                                                    <option disabled value="">Select Payment Type</option>
+                                                                    <option v-for="paymentModeList in paymentModes" v-bind:value="paymentModeList">{{paymentModeList.name}}</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-md-4 control-label text-left">
+                                                                Account Name
+                                                                <span class="text-danger"> *</span>
+                                                            </label>
+                                                            <div class="col-md-8">
+                                                                <input type="text" value="W.K.Saman Kumara" id="Username" class="form-control" v-model="updateFinancialDetails.accountName">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-md-4 control-label text-left">
+                                                                Account Number
+                                                                <span class="text-danger"> *</span>
+                                                            </label>
+                                                            <div class="col-md-8">
+                                                                <input type="text" value="8435 3444 2345" id="Username" class="form-control" v-model="updateFinancialDetails.accountNumber">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-md-4 control-label text-left">
+                                                                Bank Name
+                                                                <span class="text-danger"> *</span>
+                                                            </label>
+                                                            <div class="col-md-8">
+                                                                <select class="select2 form-control" data-placeholder="text" placeholder="Type" style="height:34px !important" v-model="updateFinancialDetails.banks">
+                                                                    <option disabled value="">Select Bank</option>
+                                                                    <option v-for="bankList in banks" v-bind:value="bankList">{{bankList.name}}</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-md-4 control-label text-left">
+                                                                Branch
+                                                                <span class="text-danger"> *</span>
+                                                            </label>
+                                                            <div class="col-md-8">
+                                                                <input type="text" value="Ambewala" id="Username" class="form-control" v-model="updateFinancialDetails.branch">
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Personal-Information -->
+                                                    </div>
+                                                </div>
+                                                <!-- Personal-Information -->
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <!-- Personal-Information -->
+                                                <div class="panel panel-default fund-details bg-green-2-border">
+                                                    <div class="panel-heading">
+                                                        <h3 class="panel-title">Fund Details Summary</h3>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                <table class="table table-hover">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Fund Name</th>
+                                                                            <th>Fund Mode</th>
+                                                                            <th>Fund Amount</th>
+                                                                            <th>Action</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr v-for="fund in updateFinancialDetails.supplierFunds">
+                                                                            <td>{{fund.fundNames.name}}</td>
+                                                                            <td>{{fund.fundModes.name}}</td>
+                                                                            <td>{{fund.fundAmount}}</td>
+                                                                            <td>
+                                                                                <button class="fa fa-edit" v-on:click="editFundRow(fund)"></button>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                        <a href="javascript:;" class="btn btn-success waves-effect waves-light btn-sm pull-right" onclick="addfunddetails();">Add Fund</a>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-default panel-fill add-fund-details" style="display:none">
+                                                    <div class="panel-heading">
+                                                        <h3 class="panel-title">Fund Details</h3>
+                                                    </div>
+                                                    <div class="panel-body form-horizontal">
+                                                        <div class="form-group">
+                                                            <label class="col-md-4 control-label text-left">Fund Name</label>
+                                                            <div class="col-md-8">
+                                                                <select class="select2 form-control" data-placeholder="text" placeholder="Type" style="height:34px !important" v-model="fundDetails.fundNames">
+                                                                    <option disabled value="">Select Fund Type</option>
+                                                                    <option v-for="fundNameList in fundNames" v-bind:value="fundNameList">{{fundNameList.name}}</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-md-4 control-label text-left">Fund Mode</label>
+                                                            <div class="col-md-8">
+                                                                <select class="select2 form-control" data-placeholder="text" placeholder="Type" style="height:34px !important" v-model="fundDetails.fundModes">
+                                                                    <option disabled value="">Select fund Mode</option>
+                                                                    <option v-for="fundModeList in fundModes" v-bind:value="fundModeList">{{fundModeList.name}}</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-md-4 control-label text-left">Fund Amount</label>
+                                                            <div class="col-md-8">
+                                                                <input type="text" value="8%" class="form-control" v-model="fundDetails.fundAmount">
+                                                            </div>
+                                                            <div class="panel panel-default">
+                                                            </div>
+                                                        </div>
+                                                        <button class="btn btn-success waves-effect waves-light btn-sm pull-right" v-on:click="addfunddetails()">{{isEdit ? 'Edit' : 'Add'}} Fund</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <small>
+                                            <label class="text-danger">(*) Mandatory</label>
+                                        </small>
+                                        <button class="btn btn-primary waves-effect waves-light w-md btn-xs pull-right" type="submit">Update</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 sup-overlay facilities" style="display:none;">
+                                <div class="panel panel-default panel-fill" style="min-height: 478px;">
+                                    <span class="sup-more-details-close">X</span>
+                                    <div class="panel-body text-left supplier-body">
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-md-12" id="facilities">
+                                                <!-- Facility-detail-Information -->
+                                                <div class="panel panel-default panel-fill">
+                                                    <div class="panel-heading">
+                                                        <h3 class="panel-title">Facilities</h3>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <div class="col-md-6 form-horizontal" id="facilities-inner">
+                                                            <div class="form-group">
+                                                                <label class="col-md-4 control-label text-left">Gross Pay</label>
+                                                                <div class="col-md-4 text-center">
+                                                                    <label class="control-label facility-lable">Rs. 50,000</label>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="col-md-4 control-label text-left">Cash Advance</label>
+
+                                                                <div class="col-md-4 text-center">
+                                                                    <label class="control-label facility-lable">Rs. 12,000</label>
+                                                                </div>
+                                                                <div class="col-md-2">
+                                                                    <a href="javascript:;" class="btn btn-success waves-effect waves-light btn-sm m-b-5" onclick="addfacilities('cash');">
+                                                                        <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                                                        Add
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label class="col-md-4 control-label text-left">Loan Installment</label>
+
+                                                                <div class="col-md-4 text-center">
+                                                                    <label class="control-label facility-lable">Rs. 5,000</label>
+                                                                </div>
+                                                                <div class="col-md-2">
+                                                                    <a href="javascript:;" class="btn btn-success waves-effect waves-light btn-sm m-b-5" onclick="addfacilities('loan')">
+                                                                        <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                                                        Add
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label class="col-md-4 control-label text-left">Fertilizer</label>
+                                                                <div class="col-md-4 text-center">
+                                                                    <label class="control-label facility-lable">Rs. 3,000</label>
+                                                                </div>
+                                                                <div class="col-md-2">
+                                                                    <a href="javascript:;" class="btn btn-success waves-effect waves-light btn-sm m-b-5" onclick="addfacilities('fertilizer')">
+                                                                        <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                                                        Add
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="col-md-4 control-label text-left">Tea</label>
+
+                                                                <div class="col-md-4 text-center">
+                                                                    <label class="control-label facility-lable">Rs. 4,000</label>
+                                                                </div>
+                                                                <div class="col-md-2">
+                                                                    <a href="javascript:;" class="btn btn-success waves-effect waves-light btn-sm m-b-5" onclick="addfacilities('tea')">
+                                                                        <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                                                        Add
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="col-md-4 control-label text-left">Fund</label>
+
+                                                                <div class="col-md-4 text-center">
+                                                                    <label class="control-label facility-lable">Rs. 600</label>
+                                                                </div>
+                                                                <div class="col-md-2">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="col-md-4 control-label text-left">Previous Debt</label>
+
+                                                                <div class="col-md-4 text-center">
+                                                                    <label class="control-label facility-lable">Rs. 1,400</label>
+                                                                </div>
+
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label class="col-md-4 control-label text-left">Transport</label>
+
+                                                                <div class="col-md-4 text-center">
+                                                                    <label class="control-label facility-lable">Rs. 2,100</label>
+                                                                </div>
+                                                                <div class="col-md-2">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group has-error">
+                                                                <label class="col-md-4 control-label text-left" style="text-align:left !important;">Total Deduction</label>
+                                                                <div class="col-md-4">
+                                                                    <input class="form-control form-control-red text-center" value="Rs. 7,000" type="text" v-model="totalDeduction">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group has-success">
+                                                                <label class="col-md-4 control-label text-left" style="text-align:left !important;">Current Balance</label>
+                                                                <div class="col-md-4">
+                                                                    <input class="form-control form-control-green text-center" value="Rs. 23,000" type="text" v-model="currentBalance">
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Facility Cash Add -->
+                                            <div class="col-md-6 form-horizontal" id="facilities-cashadd" style="display:none">
+                                                <div class="panel panel-default panel-fill">
+                                                    <div class="panel-heading">
+                                                        <h3 class="panel-title">Cash Advance Facility</h3>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <div class="form-horizontal col-md-10 col-md-offset-1">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+
+                                                                    <div class="form-group">
+                                                                        <div class="col-sm-12">
+                                                                            <label class="control-label facility-lable-add text-center">
+                                                                                <i class="fa fa-calendar" aria-hidden="true"></i> 2017/02/01
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12">
+
+                                                                    <div class="form-group">
+                                                                        <div class="col-sm-12">
+                                                                            <label class="control-label facility-lable-add text-center">
+                                                                                <i class="fa fa-leaf" aria-hidden="true"></i> 345KG
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-6 control-label">Rate</label>
+                                                                        <div class="col-sm-6">
+                                                                            <input class="form-control form-control-green text-center" type="text" v-model="rate">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-6 control-label text-left">Total Payble</label>
+                                                                        <div class="col-sm-6">
+                                                                            <p class="paying total-pay">Rs. 3,453</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-6 control-label text-left">Requested Amount</label>
+                                                                        <div class="col-sm-6">
+                                                                            <input class="form-control form-control-green" type="text" v-model="requestedAmount">
+                                                                        </div>
+                                                                    </div>
+
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-6 control-label">Pay Amount</label>
+                                                                        <div class="col-sm-6">
+                                                                            <p class="paying pay-amount">Rs. 3,453</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group ">
+                                                                        <a href="javascript:;" class="btn btn-danger cancelfacility waves-effect waves-light btn-sm m-b-5" onclick="removefacilityadd('cash');">
+                                                                            <i class="fa fa-ban" aria-hidden="true"></i> Cancel
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 text-center">
+                                                                    <div class="form-group text-right">
+                                                                        <a href="javascript:;" class="btn btn-success updatefacility waves-effect waves-light btn-sm m-b-5">
+                                                                            <i class="fa fa-pencil-square-o" aria-hidden="true"
+                                                                               onclick="updatefacilityadd('cash');"></i> Update
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Facility Loan Add -->
+                                            <div class="col-md-6 form-horizontal" id="facilities-loadadd" style="display:none">
+
+                                                <div class="panel panel-default panel-fill">
+                                                    <div class="panel-heading">
+                                                        <h3 class="panel-title">Loan Installments</h3>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <div class="form-horizontal col-md-10 col-md-offset-1">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+
+
+                                                                    <div class="form-group">
+
+                                                                        <div class="col-sm-12">
+                                                                            <label class="control-label facility-lable-add">
+                                                                                <i class="fa fa-calendar" aria-hidden="true"></i> 2017/02/01
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+
+
+                                                            </div>
+
+
+
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-6 control-label">Amount</label>
+                                                                        <div class="col-sm-6">
+                                                                            <input class="form-control form-control-green" type="text" v-model="amount">
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="col-md-12">
+
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-6 control-label">Interest</label>
+                                                                        <div class="col-sm-6">
+                                                                            <input class="form-control form-control-green" type="text" v-model="interest">
+                                                                        </div>
+                                                                    </div>
+
+
+
+
+                                                                </div>
+                                                                <div class="col-md-12">
+
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-6 control-label">Period</label>
+                                                                        <div class="col-sm-6">
+                                                                            <select class="select2 form-control" data-placeholder="text" placeholder="Type" style="height:34px !important" v-model="loanPeriodSelected">
+                                                                                <option disabled value="">Select period</option>
+                                                                                <option v-for="loanPeriodList in loanPeriods" v-bind:value="loanPeriodList.value">{{loanPeriodList.text}}</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row">
+
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-6 control-label">Start Date</label>
+                                                                        <div class="col-sm-6">
+                                                                            <input type="text" class="form-control" placeholder="mm/dd/yyyy" id="datepicker" v-model="startDate">
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-6 control-label">Installment Amount</label>
+                                                                        <div class="col-sm-6">
+                                                                            <input class="form-control form-control-green" type="text" v-model="installmentAmount">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row">
+
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group ">
+                                                                        <a href="javascript:;" class="btn btn-danger cancelfacility waves-effect waves-light btn-sm m-b-5" onclick="removefacilityadd('loan');"><i class="fa fa-ban" aria-hidden="true"></i> Cancel</a>
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="col-md-6 text-center">
+                                                                    <div class="form-group text-right">
+                                                                        <a href="javascript:;" class="btn btn-success updatefacility waves-effect waves-light btn-sm m-b-5" onclick="updatefacilityadd('loan');"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Update</a>
+                                                                    </div>
+
+                                                                </div>
+
+
+
+                                                            </div>
+
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Fertilizer Add -->
+                                            <div class="col-md-6 form-horizontal" id="facilities-fertiadd" style="display:none">
+                                                <div class="panel panel-default panel-fill">
+                                                    <div class="panel-heading">
+                                                        <h3 class="panel-title">Fertilizer</h3>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <div class="form-horizontal col-md-10 col-md-offset-1">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+
+                                                                    <div class="form-group">
+                                                                        <div class="col-sm-12">
+                                                                            <label class="control-label facility-lable-add">
+                                                                                <i class="fa fa-calendar" aria-hidden="true"></i> 2017/02/01
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12">
+
+                                                                    <div class="form-group">
+                                                                        <div class="col-sm-12">
+                                                                            <label class="control-label facility-lable-add">
+                                                                                <i class="fa fa-leaf" aria-hidden="true"></i> 345KG
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <div class="radio radio-success radio-inline">
+                                                                        <input type="radio" id="inlineRadio1" value="newissue" name="radioInline-ferti" checked="checked">
+                                                                        <label for="inlineRadio1"> New Issue </label>
+                                                                    </div>
+                                                                    <div class="radio radio-success radio-inline">
+                                                                        <input type="radio" id="inlineRadio2" value="issuedofficer" name="radioInline-ferti">
+                                                                        <label for="inlineRadio2"> Issued By Collection Officer </label>
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="col-md-12 givingofficer" style="display:none">
+                                                                    <br>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-6 control-label">Officer Name</label>
+                                                                        <div class="col-sm-6">
+                                                                            <select class="select2 form-control" data-placeholder="text" placeholder="Type" style="height:34px !important" v-model="collectionOfficerSelected">
+                                                                                <option disabled value="">Collection Officer</option>
+                                                                                <option v-for="collectionOfficerList in collectionOfficers" v-bind:value="collectionOfficerList.value">{{collectionOfficerList.text}}</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+
+
+                                                            <div class="row">
+                                                                <br class="thebr">
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-6 control-label">Fertilizer Name</label>
+                                                                        <div class="col-sm-6">
+                                                                            <select class="select2 form-control" data-placeholder="text" placeholder="Type" style="height:34px !important" v-model="fertilizerNameSelected">
+                                                                                <option disabled value="">Fertilizer Name</option>
+                                                                                <option v-for="fertilizerNameList in fertilizerNames" v-bind:value="fertilizerNameList.value">{{fertilizerNameList.text}}</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+
+
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-6 control-label">Requested Quantity</label>
+                                                                        <div class="col-sm-6">
+                                                                            <input class="form-control form-control-green" type="text" v-model="requestedQuantity">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-6 control-label">Issuable Quantity</label>
+                                                                        <div class="col-sm-6">
+                                                                            <input class="form-control form-control-green" type="text" v-model="issuableQuantity">
+                                                                        </div>
+                                                                    </div>
+
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <br>
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group ">
+                                                                        <a href="javascript:;" class="btn btn-danger cancelfacility waves-effect waves-light btn-sm m-b-5" onclick="removefacilityadd('ferti');">
+                                                                            <i class="fa fa-ban" aria-hidden="true"></i> Cancel
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 text-center">
+                                                                    <div class="form-group text-right">
+                                                                        <a href="javascript:;" class="btn btn-success updatefacility waves-effect waves-light btn-sm m-b-5" onclick="updatefacilityadd('ferti');">
+                                                                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Update
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Facility-TeaAdd-Fertilize-->
+                                            <div class="col-md-6 form-horizontal" id="facilities-teaadd" style="display:none">
+                                                <div class="panel panel-default panel-fill">
+                                                    <div class="panel-heading">
+                                                        <h3 class="panel-title">Tea</h3>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <div class="form-horizontal col-md-10 col-md-offset-1">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+
+                                                                    <div class="form-group">
+                                                                        <div class="col-sm-12">
+                                                                            <label class="control-label facility-lable-add">
+                                                                                <i class="fa fa-calendar" aria-hidden="true"></i> 2017/02/01
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12">
+
+                                                                    <div class="form-group">
+                                                                        <div class="col-sm-12">
+                                                                            <label class="control-label facility-lable-add">
+                                                                                <i class="fa fa-leaf" aria-hidden="true"></i> 345KG
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+
+                                                                <div class="col-md-12">
+
+                                                                    <div class="radio radio-success radio-inline">
+                                                                        <input type="radio" id="newissuet" value="option1" name="radioInline">
+                                                                        <label for="inlineRadio1"> New Issue </label>
+                                                                    </div>
+                                                                    <div class="radio radio-success radio-inline">
+                                                                        <input type="radio" id="offiissuet" value="option2" name="radioInline" checked="checked">
+                                                                        <label for="inlineRadio2"> Issued By Collection Officer </label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12 givingofficer">
+                                                                    <br>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-6 control-label">Officer Name</label>
+                                                                        <div class="col-sm-6">
+                                                                            <select class="select2 form-control" data-placeholder="text" placeholder="Type" style="height:34px !important" v-model="collectionOfficerSelected">
+                                                                                <option disabled value="">Collection Officer</option>
+                                                                                <option v-for="collectionOfficerList in collectionOfficers" v-bind:value="collectionOfficerList.value">{{collectionOfficerList.text}}</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="row">
+                                                                <br class="thebr">
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-6 control-label">Tea Name</label>
+                                                                        <div class="col-sm-6">
+                                                                            <select class="select2 form-control" data-placeholder="text" placeholder="Type" style="height:34px !important" v-model="teaNameSelected">
+                                                                                <option disabled value="">Tea Name</option>
+                                                                                <option v-for="teaNameList in teaNames" v-bind:value="teaNameList.value">{{teaNameList.text}}</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-6 control-label">Item Description</label>
+                                                                        <div class="col-sm-6">
+                                                                            <select class="select2 form-control" data-placeholder="text" placeholder="Type" style="height:34px !important" v-model="itemDescriptionSelected">
+                                                                                <option disabled value="">Item Descriptions</option>
+                                                                                <option v-for="itemDescriptionList in itemDescriptions" v-bind:value="itemDescriptionList.value">{{itemDescriptionList.text}}</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-6 control-label">Cost Price</label>
+                                                                        <div class="col-sm-6">
+                                                                            <input class="form-control form-control-green" type="text" v-model="costPrice">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-6 control-label">Selling Prince</label>
+                                                                        <div class="col-sm-6">
+                                                                            <input class="form-control form-control-green" type="text" v-model="sellingPrice">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-6 control-label">Requested Quantity</label>
+                                                                        <div class="col-sm-6">
+                                                                            <input class="form-control form-control-green" type="text" v-model="requestedQuantity">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-6 control-label">Issuable Quantity</label>
+                                                                        <div class="col-sm-6">
+                                                                            <input class="form-control form-control-green" type="text" v-model="issuableQuantity">
+                                                                        </div>
+                                                                    </div>
+
+
+                                                                </div>
+                                                            </div>
+
+
+
+
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group ">
+                                                                        <a href="javascript:;" class="btn btn-danger cancelfacility waves-effect waves-light btn-sm m-b-5" onclick="removefacilityadd('tea');">
+                                                                            <i class="fa fa-ban" aria-hidden="true"></i> Cancel
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 text-center">
+                                                                    <div class="form-group text-right">
+                                                                        <a href="javascript:;" class="btn btn-success updatefacility waves-effect waves-light btn-sm m-b-5" onclick="updatefacilityadd('tea');">
+                                                                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Update
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 sup-overlay tea" style="display:none;">
+                                <div class="panel panel-default panel-fill" style="min-height: 478px;">
+                                    <span class="sup-more-details-close">X</span>
+                                    <div class="panel-body text-left supplier-body">
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="mini-stat clearfix bx-shadow bg-white collection-expand" onclick="supload('tea-details')">
+                                                    <span class="mini-stat-icon bg-green-2">
+                                                        <i class="fa fa-leaf"></i>
+                                                    </span>
+                                                    <div class="mini-stat-info text-right text-dark">
+                                                        <span class="counter text-dark">345KG</span> This Month's Collection
+                                                    </div>
+                                                </div>
+
+                                                <div class="table-responsive">
+                                                    <table class="table table-hover" id="monthCollectionSummaryTable">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Date</th>
+                                                                <th>Quantity</th>
+                                                                <th>Rate</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr v-for="lst in monthCollectionSummary">
+                                                                <td>{{lst.date}}</td>
+                                                                <td>{{lst.quantity}}</td>
+                                                                <td>{{lst.rate}}</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <a href="javascript:;" class="pull-right btn btn-primary btn-xs waves-effect waves-light">More</a>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-md-8">
+                                                <!-- Personal-Information -->
+                                                <div class="panel panel-default panel-fill">
+                                                    <div class="panel-heading">
+                                                        <h3 class="panel-title">
+                                                            Collection History
+                                                            <small class="pull-right">(Last 12 Months)</small>
+                                                        </h3>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <div class="table-responsive">
+                                                            <table class="table table-hover" id="collectionHistoryTable">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Month</th>
+                                                                        <th>Quantity</th>
+                                                                        <th>Rate</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr v-for="lst in collectionHistorySummary">
+                                                                        <td>{{lst.month}}</td>
+                                                                        <td>{{lst.quantity}}</td>
+                                                                        <td>{{lst.rate}}</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <a href="javascript:;" class="pull-right btn btn-primary btn-xs waves-effect waves-light">More</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Personal-Information -->
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--------------------------------->
+
+
+
+                            <div class="col-md-12 sup-overlay tea-details" style="display:none;">
+                                <div class="panel panel-default panel-fill">
+                                    <span class="tea-details-close">X</span>
+                                    <div class="panel-body text-left supplier-moredetail-body">
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <!-- Personal-Information -->
+                                                <div class="panel panel-default panel-fill">
+                                                    <div class="panel-heading">
+                                                        <h3 class="panel-title">Tea Details</h3>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <div class="col-md-6">
+                                                            Tea Collection Details
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <span class="closer">X</span>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <!-- Page-Title -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-3 title-start">
+                        <span>Supplier</span>
+                    </div>
+                    <div class="col-md-9 title-end">
+                        <!--
+                        <ol class="breadcrumbs pull-right">
+                            <li>>Moltran</a></li>
+                            <li><a href="javascript:;">Pages</a></li>
+                            <li class="active">Blank Page</li>
+                        </ol>
+                          -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row" id="viewSupplier">
+            <div class="search-fileds">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="row">
+                            @*<div class="col-md-1">
+                                <input class="form-control input-sm" placeholder="ID" type="text" v-model="supplierTable.id">
+                            </div>*@
+                            <div class="col-md-1">
+                                <input class="form-control input-sm" placeholder="Reg No:" type="text" v-model="supplierTable.registrationNo">
+                            </div>
+                            <div class="col-md-2">
+                                <input class="form-control input-sm" placeholder="Name" type="text" v-model="supplierTable.fullName">
+                            </div>
+                            <div class="col-md-2">
+                                <select class="select2 form-control" data-placeholder="Select a route..." style="height:34px !important" v-model="supplierTable.routesId">
+                                    <option disabled value="">Select a route...</option>
+                                    <option v-for="route in routes" v-bind:value="route.id">
+                                        {{route.name}}
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="col-md-2">
+                                <select class="select2 form-control" data-placeholder="text" placeholder="Type" style="height:34px !important" v-model="supplierTable.typesId">
+                                    <option disabled value="">Select Supplier Type</option>
+                                    <option v-for="type in types" v-bind:value="type.id">{{type.name}}</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2">
+                                <select class="select2 form-control" data-placeholder="text" placeholder="Status" v-model="supplierTable.isActive">
+                                    <option value="#">Status</option>
+                                    <option value="True">Active</option>
+                                    <option value="False">Inactive</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2 pull-right">
+                                <a href="javascript:;" class="btn btn-success waves-effect waves-light btn-sm" onclick="showTable();" v-on:click="searchPaymentList">List</a>
+                                <a class="btn btn-success waves-effect waves-light btn-sm m-l-5" onclick="showNewReg();">Register New</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="newsupplier" style="display:none">
+            <div class="panel panel-default panel-fill">
+                <span class="sup-more-details-close" onclick="hideNewReg()">X</span>
+                <div class="panel-body text-left supplier-moredetail-body">
+                    <br>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!-- Personal-Information -->@*---------------------------------------------------------------------------------------------------------------------------------------------*@
+                            <div class="panel panel-default panel-fill">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Personal Information</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="col-md-6 form-horizontal">
+
+                                        <div class="form-group">
+                                            <label class="col-md-4 control-label text-left">
+                                                Registration No:
+                                                <span class="text-danger"> *</span>
+                                            </label>
+                                            <div class="col-md-8">
+                                                <input type="text" value="" class="form-control" v-model="supplierDetails.registrationNo">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-4 control-label text-left">
+                                                Full Name
+                                                <span class="text-danger"> *</span>
+                                            </label>
+                                            <div class="col-md-8">
+                                                <input type="text" value="" class="form-control" v-model="supplierDetails.fullName">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-4 control-label text-left">
+                                                Address
+                                                <span class="text-danger"> *</span>
+                                            </label>
+                                            <div class="col-md-8">
+                                                <textarea style="height: 100px" class="form-control" v-model="supplierDetails.address"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-4 control-label text-left">
+                                                Contact Number
+                                                <span class="text-danger"> *</span>
+                                            </label>
+                                            <div class="col-md-8">
+                                                <input type="text" value="" class="form-control" v-model="supplierDetails.contactNumber">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6 form-horizontal">
+
+                                        <div class="form-group">
+                                            <label class="col-md-4 control-label text-left">
+                                                &nbsp;&nbsp;Route
+                                                <span class="text-danger"> *</span>
+                                            </label>
+                                            <div class="col-md-8">
+                                                <select class="select2 form-control" data-placeholder="Select a route..." style="height:34px !important" v-model="supplierDetails.routes">
+                                                    <option disabled value="">Select a route...</option>
+                                                    <option v-for="route in routes" v-bind:value="route">
+                                                        {{route.name}}
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-md-4 control-label text-left">
+                                                &nbsp;&nbsp;Type
+                                                <span class="text-danger"> *</span>
+                                            </label>
+                                            <div class="col-md-8">
+                                                <select class="select2 form-control" data-placeholder="text" placeholder="Type" style="height:34px !important" v-model="supplierDetails.types">
+                                                    <option disabled value="">Select Supplier Type</option>
+                                                    <option v-for="type in types" v-bind:value="type">{{type.name}}</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-4 control-label text-left">
+                                                &nbsp;&nbsp;Leaf Type
+                                                <span class="text-danger"> *</span>
+                                            </label>
+                                            <div class="col-md-8">
+                                                <select class="select2 form-control" data-placeholder="text" placeholder="Leaf Type" style="height:34px !important" v-model="supplierDetails.leafTypes">
+                                                    <option disabled value="">Select Leaf Type</option>
+                                                    <option v-for="type in leafTypes" v-bind:value="type">{{type.name}}</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-md-4 control-label text-left">
+                                                &nbsp;&nbsp;NIC
+                                                <span class="text-danger"> *</span>
+                                            </label>
+                                            <div class="col-md-8">
+                                                <input type="text" value="" class="form-control" v-model="supplierDetails.nicNo">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-4 control-label text-left">&nbsp;&nbsp;Notes </label>
+                                            <div class="col-md-8">
+                                                <textarea style="height: 60px" class="form-control" v-model="supplierDetails.notes"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- Personal-Information -->
+
+                        </div>
+
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="panel panel-default panel-fill">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Financial Information</h3>
+                                </div>
+                                <!-- Financial-Information -->
+                                <div class="panel-body form-horizontal">
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label text-left">
+                                            Payment Mode
+                                            <span class="text-danger"> *</span>
+                                        </label>
+                                        <div class="col-md-8">
+                                            <select class="select2 form-control" data-placeholder="text" placeholder="Type" style="height:34px !important" v-model="supplierDetails.supplierPaymentTypes.paymentModes">
+                                                <option disabled value="">Select Payment Type</option>
+                                                <option v-for="paymentModeList in paymentModes" v-bind:value="paymentModeList">{{paymentModeList.name}}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label text-left">
+                                            Account Name
+                                            <span class="text-danger"> *</span>
+                                        </label>
+                                        <div class="col-md-8">
+                                            <input type="text" value="" id="Username" class="form-control" v-model="supplierDetails.supplierPaymentTypes.accountName">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label text-left">
+                                            Account Number
+                                            <span class="text-danger"> *</span>
+                                        </label>
+                                        <div class="col-md-8">
+                                            <input type="text" value="" id="Username" class="form-control" v-model="supplierDetails.supplierPaymentTypes.accountNumber">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label text-left">
+                                            Bank Name
+                                            <span class="text-danger"> *</span>
+                                        </label>
+                                        <div class="col-md-8">
+                                            <select class="select2 form-control" data-placeholder="text" placeholder="Type" style="height:34px !important" v-model="supplierDetails.supplierPaymentTypes.banks">
+                                                <option disabled value="">Select Bank</option>
+                                                <option v-for="bankList in banks" v-bind:value="bankList">{{bankList.name}}</option>
+                                            </select>
+                                            <!--<input type="text" value="" id="Username" class="form-control" v-model="supplierDetails.supplierPaymentTypes.bankName">-->
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label text-left">
+                                            Branch
+                                            <span class="text-danger"> *</span>
+                                        </label>
+                                        <div class="col-md-8">
+                                            <input type="text" value="" id="Username" class="form-control" v-model="supplierDetails.supplierPaymentTypes.branch">
+                                        </div>
+                                    </div>
+
+                                    <!-- Fund-Detail-Summary-Information -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="panel panel-default fund-details">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Fund Details Summary</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Fund Name</th>
+                                                        <th>Fund Mode</th>
+                                                        <th>Fund Amount</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr v-for="fund in supplierDetails.supplierFunds">
+                                                        <td>{{fund.fundNames.name}}</td>
+                                                        <td>{{fund.fundModes.name}}</td>
+                                                        <td>{{fund.fundAmount}}</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default panel-fill add-fund-details">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Fund Details</h3>
+                                </div>
+                                <div class="panel-body form-horizontal">
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label text-left">Fund Name</label>
+                                        <div class="col-md-8">
+                                            <select class="select2 form-control" data-placeholder="text" placeholder="Type" style="height:34px !important" v-model="fundDetails.fundNames">
+                                                <option disabled value="">Select Fund Type</option>
+                                                <option v-for="fundNameList in fundNames" v-bind:value="fundNameList">{{fundNameList.name}}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label text-left">Fund Mode</label>
+                                        <div class="col-md-8">
+                                            <select class="select2 form-control" data-placeholder="text" placeholder="Type" style="height:34px !important" v-model="fundDetails.fundModes">
+                                                <option disabled value="">Select fund Mode</option>
+                                                <option v-for="fundModeList in fundModes" v-bind:value="fundModeList">{{fundModeList.name}}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label text-left">Fund Amount</label>
+                                        <div class="col-md-8">
+                                            <input type="text" value="" class="form-control" v-model="fundDetails.fundAmount">
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                    </div>
+                                    <button class="btn btn-success waves-effect waves-light btn-sm pull-right" v-on:click="addfunddetails">Add Fund</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <small>
+                        <label class="text-danger">(*) Mandatory</label>
+                    </small>
+                    <button class="btn btn-primary waves-effect waves-light w-md btn-xs pull-right" type="submit" v-on:click="submitSupplierDetails">Register</button>
+                </div>
+            </div>
+        </div>
+        <div class="md-overlay"></div>
+        <div class="row" id="resultTable" style="display:none;">
+            <div class="panel panel-default ">
+                <div class="panel-heading bg-green">
+                    <h3 class="panel-title">Suppliers</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="table-responsive">
+                                <table id="datatable-supplierGridList" class="table display nowrap">
+                                    <thead>
+                                        <tr>
+                                            <th>Registration No.</th>
+                                            <th>Name</th>
+                                            <th>Route</th>
+                                            <th>Type </th>
+                                            <th>Status</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- container -->
+</div>
+<!-- content -->
+
+<!-- $('#exampleModal').modal('show') -->
+
+
+<script src="~/Content/assets/plugins/select2/dist/js/select2.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="~/Content/assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
+<script type="text/javascript" href="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+<!-- Modal-Effect -->
+<script src="~/Content/assets/plugins/modal-effect/js/classie.js"></script>
+<script src="~/Content/assets/plugins/modal-effect/js/modalEffects.js"></script>
+<!--Form Wizard-->
+<script src="~/Content/assets/plugins/jquery.steps/build/jquery.steps.min.js" type="text/javascript"></script>
+<script src="~/Content/assets/pages/jquery.wizard-init.js" type="text/javascript"></script>
+<script src="~/Scripts/common.js"></script>
+<script src="~/Scripts/silverTip/supplier.js"></script>
+
+<script>
+    jQuery(document).ready(function () {
+        jQuery(".select2").select2({
+            width: '100%'
+        });
+
+        // Date Picker
+        jQuery('#datepicker').datepicker();
+        jQuery('#datepicker-inline').datepicker();
+        jQuery('#datepicker-multiple').datepicker({
+            numberOfMonths: 3,
+            showButtonPanel: true
+        });
+
+
+    });
+
+    function showTable() {
+        $("#resultTable").show();
+    }
+
+    $('.openMod').click(function () {
+        $(".child").show();
+        resize();
+
+    });
+
+    $('.open-left').click(function () {
+        resize();
+    });
+
+    function resize() {
+        var divWidth = $(".content").innerWidth();
+        var divHeight = $(".content").innerHeight();
+        divHeight = divHeight + 55;
+        $(".child").height(divHeight);
+        $(".child").width(divWidth);
+    }
+
+    $('.child .closer').click(function () {
+        $(".child").hide();
+        $('.sup-overlay').hide();
+        $('.personal-class').removeClass("bg-green");
+        $('.financial-class').removeClass("bg-green");
+        $('.facilities-class').removeClass("bg-green");
+        $('.tea-class').removeClass("bg-green");
+        removefacilityadd('all');
+    });
+
+
+    $(".content").resize(function () {
+        var $this = $(this);
+        var parentwidth = $this.innerWidth();
+        var parentheight = $this.innerHeight();
+        $(".child").css({
+            'width': parentwidth,
+            'height': parentheight
+        });
+    });
+
+    function supload(whattoload) {
+        //$('.sup-main-details .supplier-link').hide();
+        if (whattoload == 'personal') {
+            $('.personal').show();
+            $('.financial').hide();
+            $('.facilities').hide();
+            $('.tea').hide();
+            $('.tea-details').hide();
+
+            $('.personal-class').addClass("bg-green");
+            $('.financial-class').removeClass("bg-green");
+            $('.facilities-class').removeClass("bg-green");
+            $('.tea-class').removeClass("bg-green");
+
+        } else if (whattoload == 'financial') {
+            $('.personal').hide();
+            $('.financial').show();
+            $('.facilities').hide();
+            $('.tea').hide();
+            $('.tea-details').hide();
+
+            $('.personal-class').removeClass("bg-green");
+            $('.financial-class').addClass("bg-green");
+            $('.facilities-class').removeClass("bg-green");
+            $('.tea-class').removeClass("bg-green")
+        } else if (whattoload == 'facilities') {
+            $('.personal').hide();
+            $('.financial').hide();
+            $('.facilities').show();
+            $('.tea').hide();
+            $('.tea-details').hide();
+
+            $('.personal-class').removeClass("bg-green");
+            $('.financial-class').removeClass("bg-green");
+            $('.facilities-class').addClass("bg-green");
+            $('.tea-class').removeClass("bg-green");
+        } else if (whattoload == 'tea') {
+            $('.personal').hide();
+            $('.financial').hide();
+            $('.facilities').hide();
+            $('.tea').show();
+            $('.tea-details').hide();
+
+            $('.personal-class').removeClass("bg-green");
+            $('.financial-class').removeClass("bg-green");
+            $('.facilities-class').removeClass("bg-green");
+            $('.tea-class').addClass("bg-green");
+        } else if (whattoload == 'tea-details') {
+            $('.personal').hide();
+            $('.financial').hide();
+            $('.facilities').hide();
+            $('.tea').hide();
+            $('.tea-details').show();
+
+        }
+
+
+    }
+
+    /*$('.supplier-link').click(function () {
+
+        $('.sup-main-details .supplier-link').hide();
+        $('.sup-overlay').show();
+    });*/
+
+
+
+    $('.tea-details-close').click(function () {
+        $('.tea-details').hide();
+        $('.tea').show();
+        $('.tea-class').addClass("bg-green");
+    });
+
+    $('.sup-more-details-close').click(function () {
+        $('.sup-main-details .supplier-link').show();
+        $('.sup-overlay').hide();
+        $('.personal-class').removeClass("bg-green");
+        $('.financial-class').removeClass("bg-green");
+        $('.facilities-class').removeClass("bg-green");
+        $('.tea-class').removeClass("bg-green");
+        removefacilityadd('all');
+    });
+
+
+    function addfacilities(facilitytype) {
+        $('#facilities').removeClass("col-md-12");
+        $('#facilities').addClass("col-md-6");
+
+        $('#facilities-inner').removeClass("col-md-6");
+        $('#facilities-inner').addClass("col-md-12");
+
+
+        if (facilitytype == 'cash') {
+
+            $('#facilities-cashadd').show();
+            $('#facilities-fertiadd').hide();
+            $('#facilities-teaadd').hide();
+            $('#facilities-loadadd').hide();
+
+        } else if (facilitytype == 'debt') {
+            $('#debt').show();
+        } else if (facilitytype == 'transport') {
+            $('#trans').show();
+        } else if (facilitytype == 'fertilizer') {
+
+            $('#facilities-fertiadd').show();
+            $('#facilities-cashadd').hide();
+            $('#facilities-teaadd').hide();
+            $('#facilities-loadadd').hide();
+
+        } else if (facilitytype == 'fund') {
+            $('#fundadd').show();
+        } else if (facilitytype == 'tea') {
+
+            $('#facilities-teaadd').show();
+            $('#facilities-cashadd').hide();
+            $('#facilities-fertiadd').hide();
+            $('#facilities-loadadd').hide();
+
+        } else if (facilitytype == 'loan') {
+
+            $('#facilities-loadadd').show();
+            $('#facilities-cashadd').hide();
+            $('#facilities-fertiadd').hide();
+            $('#facilities-teaadd').hide();
+
+        }
+
+    }
+
+    function removefacilityadd(fertiremtype) {
+        if (fertiremtype == 'cash') {
+            $('#facilities-cashadd').hide();
+        }
+        else if (fertiremtype == 'loan') {
+            $('#facilities-loadadd').hide();
+        }
+        else if (fertiremtype == 'ferti') {
+            $('#facilities-fertiadd').hide();
+        }
+        else if (fertiremtype == 'tea') {
+            $('#facilities-teaadd').hide();
+        }
+        else if (fertiremtype == 'all') {
+            $('#facilities-cashadd').hide();
+            $('#facilities-loadadd').hide();
+            $('#facilities-fertiadd').hide();
+            $('#facilities-teaadd').hide();
+        }
+
+        $('#facilities').removeClass("col-md-6");
+        $('#facilities').addClass("col-md-12");
+
+        $('#facilities-inner').removeClass("col-md-12");
+        $('#facilities-inner').addClass("col-md-6");
+
+
+    }
+
+    function updatefacilityadd(fertiuptype) {
+
+    }
+
+    function addfunddetails() {
+        $('.add-fund-details').show();
+    }
+
+    function showNewReg() {
+        $("#resultTable").hide();
+        $('#newsupplier').show();
+    }
+    function hideNewReg() {
+        $('#newsupplier').hide();
+    }
+
+
+
+    $('#inlineRadio2').click(function () {
+        $('.givingofficer').show();
+        $('.thebr').hide();
+
+    });
+
+    $('#inlineRadio1').click(function () {
+        $('.givingofficer').hide();
+        $('.thebr').show();
+    });
+
+    $('#offiissuet').click(function () {
+        $('.givingofficer').show();
+        $('.thebr').hide();
+
+    });
+
+    $('#newissuet').click(function () {
+        $('.givingofficer').hide();
+        $('.thebr').show();
+    });
+
+</script>
