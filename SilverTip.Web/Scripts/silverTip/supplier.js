@@ -31,7 +31,7 @@
         banks:[],
         //Created a list to add each iteration to the table
         fundDetails: {
-            id: "0",
+            supplierFundId: "0",
             fundNames: {},
             fundModes: {},
             fundAmount: '',
@@ -39,8 +39,19 @@
         fObj:{}
     },
     methods: {
-        addfunddetails: function(){
-            this.supplierDetails.supplierFunds.push(this.fundDetails);
+        addfunddetails: function () {
+            var x = JSON.parse(JSON.stringify(this.fundDetails));
+            this.supplierDetails.supplierFunds.push(x);
+            x.supplierFundId = 0;
+            this.clearFundDetails();
+        },
+        clearFundDetails: function () {
+            this.fundDetails.id = "0";
+            this.fundDetails.fundNames = {};
+            this.fundDetails.fundModes = {};
+            this.fundDetails.fundAmount = "";
+            this.isEdit = false;
+
         },
         submitSupplierDetails: function () {
             console.log(this.supplierDetails);
@@ -147,7 +158,20 @@
                 }
             }).catch(function (response) {
             });
-        }
+        },
+        //getAllSupplierFunds: function () {
+        //    this.$http.get(apiISS + '/api/SupplierFund/GetAllSupplierFunds', {}
+        //    ).then(function (response) {
+        //        if (response.body.messageCode.code == 1) {
+        //            console.log('Get All Banks - code 1');
+        //            this.banks = response.body.bankList;
+        //            UpdateSupplierFinancialDetails.banks = response.body.supplierFundList;
+        //        } else {
+        //            console.log('Get All Banks - else part');
+        //        }
+        //    }).catch(function (response) {
+        //    });
+        //}
     },
     mounted() {
         this.getAllRoutes();
@@ -408,20 +432,21 @@ var UpdateSupplierFinancialDetails = new Vue({
     el: '#updateSupplierFinancialDetails',
     data: {
         updateFinancialDetails: {
+            id:'',
+            registrationNo: '',
             paymentModes: {},
             accountName: '',
             accountNumber: '',
             banks: {},
             branch: '',
             supplierFunds: [],
-            
         },
         paymentModes: [],
         fundNames: [],
         fundModes: [],
         banks: [],
         fundDetails: {
-                id: "0",
+                supplierFundId: "0",
                 fundNames: {},
                 fundModes: {},
                 fundAmount: '',
@@ -429,22 +454,34 @@ var UpdateSupplierFinancialDetails = new Vue({
         isEdit: false
     },
     methods: {
-        updateSupplierDetails: function () {
+        updateSupplierFinancialDetails: function () {
+            UpdateSupplierFinancialDetails.updateFinancialDetails.registrationNo = UpdateSupplierPersonalDetails.updatePersonalDetails.registrationNo;
+            UpdateSupplierFinancialDetails.updateFinancialDetails.id = NewSupplier.supplierDetails.id;
+
+            //UpdateSupplierFinancialDetails.updateFinancialDetails.supplierFunds.filter(function (obj) {
+            //    if (obj.supplierId == UpdateSupplierFinancialDetails.supplierId) {
+            //        UpdateSupplierFinancialDetails.fundDetails.id = UpdateSupplierFinancialDetails.updateFinancialDetails.supplierFunds.supplierFundId;
+            //    }
+            //});
+
             console.log(this.updateFinancialDetails);
-            this.$http.get(apiISS + '/api/Supplier/UpdateSupplierPersonalDetails', this.updateFinancialDetails
+            this.$http.post(apiISS + '/api/Supplier/UpdateSupplierFinancialDetails', this.updateFinancialDetails
             ).then(function (response) {
                 console.log(response);
                 if (response.body.messageCode.code == 1) {
+                    console.log('Update Supplier Financial Details - code 1');
                 } else {
+                    console.log('Update Supplier Financial Details - else');
                 }
             }).catch(function (response) {
+                console.log(this.response);
             });
         },
         addfunddetails: function () {
             var x = JSON.parse(JSON.stringify(this.fundDetails));
             if (this.isEdit) {
                 this.updateFinancialDetails.supplierFunds.filter(function (obj) {
-                    if (obj.id == x.id) {
+                    if (obj.supplierFundId == x.supplierFundId) {
                         obj.fundNames = UpdateSupplierFinancialDetails.fundDetails.fundNames;
                         obj.fundModes = UpdateSupplierFinancialDetails.fundDetails.fundModes;
                         obj.fundAmount = UpdateSupplierFinancialDetails.fundDetails.fundAmount;
@@ -455,7 +492,9 @@ var UpdateSupplierFinancialDetails = new Vue({
             else {
                 //var y = JSON.parse(JSON.stringify(x));
                 var date = new Date();                
-                x.id = Math.floor(Math.random() * -10 * date.getSeconds());
+                //x.id = Math.floor(Math.random() * -10 * date.getSeconds());
+                //x.id = 0;
+                x.supplierFundId = 0;
                 this.updateFinancialDetails.supplierFunds.push(x);
                 this.clearFundDetails();
             }
@@ -464,12 +503,27 @@ var UpdateSupplierFinancialDetails = new Vue({
         editFundRow: function (fund) {
             this.isEdit = true;
             this.fundDetails = JSON.parse(JSON.stringify(fund));
+
+            this.fundModes.filter(function (obj) {
+                if (obj.id == fund.fundModes.id) {
+                    UpdateSupplierFinancialDetails.fundDetails.fundModes = obj;
+                }
+            });
+
+            this.fundNames.filter(function (obj) {
+                if (obj.id == fund.fundNames.id) {
+                    UpdateSupplierFinancialDetails.fundDetails.fundNames = obj;
+                }
+            });
+
+
         },
         clearFundDetails: function () {
             this.fundDetails.id = "0";
             this.fundDetails.fundNames = {};
             this.fundDetails.fundModes = {};
             this.fundDetails.fundAmount = "";
+            this.isEdit = false;
 
         },
         getFinancialDetails: function () {
@@ -523,7 +577,7 @@ var FinanceDetailsHeading = new Vue({
                             UpdateSupplierFinancialDetails.updateFinancialDetails.banks = obj;
                         }
                     });
-
+                    ////AJAX////
                     this.$http.get(apiISS + '/api/SupplierFund/GetAllFundsById', {
                         params: {
                             id: id,
@@ -535,9 +589,30 @@ var FinanceDetailsHeading = new Vue({
                             console.log('Get Supplier Fund List by SupId - code 1');
 
                             UpdateSupplierFinancialDetails.updateFinancialDetails.supplierFunds = response.body.supplierFundDetailsVM.supplierFunds;
+                            //UpdateSupplierFinancialDetails.supplierId = response.body.supplierFundDetailsVM.supplierId;
+
+                            console.log(UpdateSupplierFinancialDetails.updateFinancialDetails.supplierFunds);
+                            console.log(UpdateSupplierFinancialDetails.updateFinancialDetails.supplierFunds[0].fundAmount);
+                            console.log(UpdateSupplierFinancialDetails.updateFinancialDetails.supplierFunds.supplierFundId);
+                            //console.log(UpdateSupplierFinancialDetails.updateFinancialDetails.supplierFunds[0].fundNames[0]); //<--undefined
+                            //UpdateSupplierFinancialDetails.updateFinancialDetails.supplierFundId = response.body.supplierFundDetailsVM.supplierFundId;
+
+                            //UpdateSupplierFinancialDetails.fundDetails.filter(function (obj) {
+                            //    if (obj.id == response.body.supplierFundDetailsVM.supplierFundId) {
+                            //        UpdateSupplierFinancialDetails.fundDetails = obj;
+                            //    }
+                            //});
                             this.obj = JSON.parse(JSON.stringify(UpdateSupplierFinancialDetails.updateFinancialDetails.supplierFunds));
                             console.log(this.obj);
-                            console.log(this.obj.fundModes.id);  //cannot access the inner object
+                            //console.log(this.obj.fundModes.id);//cannot access the inner object
+                            //console.log(this.obj.fundModes.id);
+
+                            //setTimeout(function () {
+                            //    var a = this.obj.fundModes.id;    //voila!
+
+                            //}, 100);
+
+                            //console.log(this.a);
 
                             //UpdateSupplierFinancialDetails.fundModes.filter(function (obj) {
                             //    if (obj.id == response.body.supplierFundDetailsVM.supplierFunds.fundModes.id) {
